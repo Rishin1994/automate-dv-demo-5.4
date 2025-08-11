@@ -7763,3 +7763,2594 @@ SELECT * FROM records_to_insert;
 [0m16:33:41.668518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ceb6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045edd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153027b20>]}
 [0m16:33:41.669040 [debug] [MainThread]: Flushing usage events
 [0m16:33:42.573035 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:05:30.887882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056cf6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106824580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106824c40>]}
+
+
+============================== 20:05:30.891156 | cce3a638-4000-4c9d-84d5-e58106f17341 ==============================
+[0m20:05:30.891156 [info ] [MainThread]: Running with dbt=1.10.7
+[0m20:05:30.891481 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:05:32.921254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a1da20>]}
+[0m20:05:32.954131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679be80>]}
+[0m20:05:32.954558 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m20:05:33.087607 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m20:05:33.197652 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m20:05:33.198114 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/stage/v_stg_inventory2.sql
+[0m20:05:33.198318 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/stage/v_stg_inventory1.sql
+[0m20:05:33.198529 [debug] [MainThread]: Partial parsing: updated file: dbt_bq_sa://models/stage/v_stg_orders.sql
+[0m20:05:33.495188 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 7 unused configuration paths:
+- models.raw_vault.t_links
+- models.raw_vault.sats
+- models.raw_vault.hubs
+- models.stage
+- models.raw_vault
+- models.raw_stage
+- models.raw_vault.links
+[0m20:05:33.506894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141bc8130>]}
+[0m20:05:33.569415 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/manifest.json
+[0m20:05:33.572122 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/semantic_manifest.json
+[0m20:05:33.676025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141b14d00>]}
+[0m20:05:33.676405 [info ] [MainThread]: Found 33 models, 8 sources, 854 macros
+[0m20:05:33.676591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141b14d00>]}
+[0m20:05:33.678014 [info ] [MainThread]: 
+[0m20:05:33.678208 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:05:33.678349 [info ] [MainThread]: 
+[0m20:05:33.678597 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:05:33.682059 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_trim-field-467501-p5'
+[0m20:05:33.682263 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:05:34.587950 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_trim-field-467501-p5, now list_trim-field-467501-p5_dbt_dataset)
+[0m20:05:34.588915 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:05:35.423023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e534f0>]}
+[0m20:05:35.424330 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:05:35.431227 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_orders
+[0m20:05:35.432026 [info ] [Thread-1 (]: 1 of 33 START sql view model dbt_dataset.raw_orders ............................ [RUN]
+[0m20:05:35.432665 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_trim-field-467501-p5_dbt_dataset, now model.dbt_bq_sa.raw_orders)
+[0m20:05:35.433138 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_orders
+[0m20:05:35.448094 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_orders"
+[0m20:05:35.449116 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_orders
+[0m20:05:35.475361 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_orders"
+[0m20:05:35.476085 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_orders: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_orders"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_orders`
+  OPTIONS()
+  as SELECT
+    a.L_ORDERKEY AS ORDERKEY,
+    a.L_PARTKEY AS PARTKEY,
+    a.L_SUPPKEY AS SUPPLIERKEY,
+    a.L_LINENUMBER AS LINENUMBER,
+    a.L_QUANTITY AS QUANTITY,
+    a.L_EXTENDEDPRICE AS EXTENDEDPRICE,
+    a.L_DISCOUNT AS DISCOUNT,
+    a.L_TAX AS TAX,
+    a.L_RETURNFLAG AS RETURNFLAG,
+    a.L_LINESTATUS AS LINESTATUS,
+    a.L_SHIPDATE AS SHIPDATE,
+    a.L_COMMITDATE AS COMMITDATE,
+    a.L_RECEIPTDATE AS RECEIPTDATE,
+    a.L_SHIPINSTRUCT AS SHIPINSTRUCT,
+    a.L_SHIPMODE AS SHIPMODE,
+    a.L_COMMENT AS LINE_COMMENT,
+    b.O_CUSTKEY AS CUSTOMERKEY,
+    b.O_ORDERSTATUS AS ORDERSTATUS,
+    b.O_TOTALPRICE AS TOTALPRICE,
+    b.O_ORDERDATE AS ORDERDATE,
+    b.O_ORDERPRIORITY AS ORDERPRIORITY,
+    b.O_CLERK AS CLERK,
+    b.O_SHIPPRIORITY AS SHIPPRIORITY,
+    b.O_COMMENT AS ORDER_COMMENT,
+    c.C_NAME AS CUSTOMER_NAME,
+    c.C_ADDRESS AS CUSTOMER_ADDRESS,
+    c.C_NATIONKEY AS CUSTOMER_NATION_KEY,
+    c.C_PHONE AS CUSTOMER_PHONE,
+    c.C_ACCTBAL AS CUSTOMER_ACCBAL,
+    c.C_MKTSEGMENT AS CUSTOMER_MKTSEGMENT,
+    c.C_COMMENT AS CUSTOMER_COMMENT,
+    d.N_NAME AS CUSTOMER_NATION_NAME,
+    d.N_REGIONKEY AS CUSTOMER_REGION_KEY,
+    d.N_COMMENT AS CUSTOMER_NATION_COMMENT,
+    e.R_NAME AS CUSTOMER_REGION_NAME,
+    e.R_COMMENT AS CUSTOMER_REGION_COMMENT
+FROM `trim-field-467501-p5`.`dbt_dataset`.`orders` AS b
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`lineitem` AS a
+    ON a.L_ORDERKEY = b.O_ORDERKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`customer` AS c
+    ON b.O_CUSTKEY = c.C_CUSTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS d
+    ON c.C_NATIONKEY = d.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS e
+    ON d.N_REGIONKEY = e.R_REGIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`part` AS g
+    ON a.L_PARTKEY = g.P_PARTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`supplier` AS h
+    ON a.L_SUPPKEY = h.S_SUPPKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS j
+    ON h.S_NATIONKEY = j.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS k
+    ON j.N_REGIONKEY = k.R_REGIONKEY
+WHERE b.O_ORDERDATE = PARSE_DATE('%Y-%m-%d', '1992-01-08');
+
+
+[0m20:05:35.476487 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:36.568638 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:33492154-7aff-4821-8589-9ae44fe95a98&page=queryresults
+[0m20:05:37.514610 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106175d50>]}
+[0m20:05:37.515255 [info ] [Thread-1 (]: 1 of 33 OK created sql view model dbt_dataset.raw_orders ....................... [[32mCREATE VIEW (0 processed)[0m in 2.08s]
+[0m20:05:37.515722 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_orders
+[0m20:05:37.516036 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_transactions
+[0m20:05:37.516572 [info ] [Thread-1 (]: 2 of 33 START sql view model dbt_dataset.raw_transactions ...................... [RUN]
+[0m20:05:37.516882 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_orders, now model.dbt_bq_sa.raw_transactions)
+[0m20:05:37.517152 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_transactions
+[0m20:05:37.520531 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_transactions"
+[0m20:05:37.521064 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_transactions
+[0m20:05:37.524455 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_transactions"
+[0m20:05:37.525326 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_transactions`
+  OPTIONS()
+  as SELECT
+    b.O_ORDERKEY AS ORDER_ID,
+    b.O_CUSTKEY AS CUSTOMER_ID,
+    b.O_ORDERDATE AS ORDER_DATE,
+    DATE_ADD(b.O_ORDERDATE, INTERVAL 20 DAY) AS TRANSACTION_DATE,
+    CAST(RPAD(CONCAT(CAST(b.O_ORDERKEY AS STRING), CAST(b.O_CUSTKEY AS STRING), FORMAT_DATE('%Y%m%d', b.O_ORDERDATE)), 24, '0') AS INT64) AS TRANSACTION_NUMBER,
+    b.O_TOTALPRICE AS AMOUNT,
+    CAST(
+        CASE FLOOR(RAND() * 2) + 1
+            WHEN 1 THEN 'DR'
+            WHEN 2 THEN 'CR'
+        END AS STRING) AS TYPE
+FROM `trim-field-467501-p5`.`dbt_dataset`.`orders` AS b
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`customer` AS c
+    ON b.O_CUSTKEY = c.C_CUSTKEY
+WHERE b.O_ORDERDATE = PARSE_DATE('%Y-%m-%d', '1992-01-08');
+
+
+[0m20:05:37.525683 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:38.633781 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:b24e27bb-e7f8-4998-b284-54b8d9fae67c&page=queryresults
+[0m20:05:39.490264 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:05:39.492244 [info ] [Thread-1 (]: 2 of 33 OK created sql view model dbt_dataset.raw_transactions ................. [[32mCREATE VIEW (0 processed)[0m in 1.97s]
+[0m20:05:39.493554 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_transactions
+[0m20:05:39.494240 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_inventory
+[0m20:05:39.495328 [info ] [Thread-1 (]: 3 of 33 START sql view model dbt_dataset.raw_inventory ......................... [RUN]
+[0m20:05:39.496215 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_transactions, now model.dbt_bq_sa.raw_inventory)
+[0m20:05:39.496819 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_inventory
+[0m20:05:39.509067 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_inventory"
+[0m20:05:39.510403 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_inventory
+[0m20:05:39.515829 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_inventory"
+[0m20:05:39.516923 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+  OPTIONS()
+  as SELECT
+    a.PS_PARTKEY AS PARTKEY,
+    a.PS_SUPPKEY AS SUPPLIERKEY,
+    a.PS_AVAILQTY AS AVAILQTY,
+    a.PS_SUPPLYCOST AS SUPPLYCOST,
+    a.PS_COMMENT AS PART_SUPPLY_COMMENT,
+    b.S_NAME AS SUPPLIER_NAME,
+    b.S_ADDRESS AS SUPPLIER_ADDRESS,
+    b.S_NATIONKEY AS SUPPLIER_NATION_KEY,
+    b.S_PHONE AS SUPPLIER_PHONE,
+    b.S_ACCTBAL AS SUPPLIER_ACCTBAL,
+    b.S_COMMENT AS SUPPLIER_COMMENT,
+    c.P_NAME AS PART_NAME,
+    c.P_MFGR AS PART_MFGR,
+    c.P_BRAND AS PART_BRAND,
+    c.P_TYPE AS PART_TYPE,
+    c.P_SIZE AS PART_SIZE,
+    c.P_CONTAINER AS PART_CONTAINER,
+    c.P_RETAILPRICE AS PART_RETAILPRICE,
+    c.P_COMMENT AS PART_COMMENT,
+    d.N_NAME AS SUPPLIER_NATION_NAME,
+    d.N_COMMENT AS SUPPLIER_NATION_COMMENT,
+    d.N_REGIONKEY AS SUPPLIER_REGION_KEY,
+    e.R_NAME AS SUPPLIER_REGION_NAME,
+    e.R_COMMENT AS SUPPLIER_REGION_COMMENT
+FROM `trim-field-467501-p5`.`dbt_dataset`.`partsupp` AS a
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`supplier` AS b
+    ON a.PS_SUPPKEY = b.S_SUPPKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`part` AS c
+    ON a.PS_PARTKEY = c.P_PARTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS d
+    ON b.S_NATIONKEY = d.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS e
+    ON d.N_REGIONKEY = e.R_REGIONKEY
+JOIN `trim-field-467501-p5`.`dbt_dataset`.`raw_orders` AS f
+    ON a.PS_PARTKEY = f.PARTKEY AND a.PS_SUPPKEY=f.SUPPLIERKEY
+ORDER BY a.PS_PARTKEY, a.PS_SUPPKEY;
+
+
+[0m20:05:39.517537 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:40.722797 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:6f2d40ed-a79c-41bf-9bda-133ad2f7d318&page=queryresults
+[0m20:05:41.673986 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106176560>]}
+[0m20:05:41.674508 [info ] [Thread-1 (]: 3 of 33 OK created sql view model dbt_dataset.raw_inventory .................... [[32mCREATE VIEW (0 processed)[0m in 2.18s]
+[0m20:05:41.674861 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_inventory
+[0m20:05:41.675111 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_orders
+[0m20:05:41.675516 [info ] [Thread-1 (]: 4 of 33 START sql view model dbt_dataset.v_stg_orders .......................... [RUN]
+[0m20:05:41.675837 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_inventory, now model.dbt_bq_sa.v_stg_orders)
+[0m20:05:41.676055 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_orders
+[0m20:05:41.680911 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:43.030954 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_orders"
+[0m20:05:43.032366 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_orders
+[0m20:05:43.036208 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_orders"
+[0m20:05:43.038649 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_orders: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_orders"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_orders`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMERKEY AS CUSTOMER_KEY,
+    CUSTOMER_NATION_KEY AS NATION_KEY,
+    CUSTOMER_REGION_KEY AS REGION_KEY,
+    'TPCH-ORDERS' AS RECORD_SOURCE,
+    ORDERDATE AS EFFECTIVE_FROM
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMER_KEY,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    EFFECTIVE_FROM,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_CUSTOMER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), '')))) AS STRING) AS ORDER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS ORDER_CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINEITEM_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^')
+    ), '^^||^^||^^')))) AS STRING) AS LINK_LINEITEM_ORDER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^||^^')))) AS STRING) AS INVENTORY_ALLOCATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ACCBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_MKTSEGMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_PHONE AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(COMMITDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(DISCOUNT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(EXTENDEDPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINE_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINESTATUS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(QUANTITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(RECEIPTDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(RETURNFLAG AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPINSTRUCT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPMODE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TAX AS STRING))), ''), '^^')
+    )))) AS STRING) AS LINEITEM_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CLERK AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERPRIORITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERSTATUS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPPRIORITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TOTALPRICE AS STRING))), ''), '^^')
+    )))) AS STRING) AS ORDER_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMER_KEY,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    EFFECTIVE_FROM,
+    CUSTOMER_PK,
+    LINK_CUSTOMER_NATION_PK,
+    CUSTOMER_NATION_PK,
+    CUSTOMER_REGION_PK,
+    NATION_PK,
+    REGION_PK,
+    NATION_REGION_PK,
+    ORDER_PK,
+    ORDER_CUSTOMER_PK,
+    LINEITEM_PK,
+    LINK_LINEITEM_ORDER_PK,
+    PART_PK,
+    SUPPLIER_PK,
+    INVENTORY_PK,
+    INVENTORY_ALLOCATION_PK,
+    CUSTOMER_HASHDIFF,
+    CUSTOMER_NATION_HASHDIFF,
+    CUSTOMER_REGION_HASHDIFF,
+    LINEITEM_HASHDIFF,
+    ORDER_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT * ,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE
+FROM staging;
+
+
+[0m20:05:43.846949 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:a89ee1c1-be74-41e3-8a50-a048cbd0f207&page=queryresults
+[0m20:05:44.723094 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:05:44.725362 [info ] [Thread-1 (]: 4 of 33 OK created sql view model dbt_dataset.v_stg_orders ..................... [[32mCREATE VIEW (0 processed)[0m in 3.05s]
+[0m20:05:44.726423 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_orders
+[0m20:05:44.727049 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_transactions
+[0m20:05:44.728164 [info ] [Thread-1 (]: 5 of 33 START sql view model dbt_dataset.v_stg_transactions .................... [RUN]
+[0m20:05:44.729476 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_orders, now model.dbt_bq_sa.v_stg_transactions)
+[0m20:05:44.730057 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_transactions
+[0m20:05:44.744249 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:46.115944 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_transactions"
+[0m20:05:46.118218 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_transactions
+[0m20:05:46.125655 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_transactions"
+[0m20:05:46.126773 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_transactions`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_transactions`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    'RAW_TRANSACTIONS' AS RECORD_SOURCE,
+    DATE_ADD(TRANSACTION_DATE, INTERVAL 1 DAY) AS LOAD_DATE,
+    TRANSACTION_DATE AS EFFECTIVE_FROM
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    RECORD_SOURCE,
+    LOAD_DATE,
+    EFFECTIVE_FROM,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ID AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TRANSACTION_NUMBER AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS TRANSACTION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ID AS STRING))), '')))) AS STRING) AS CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(ORDER_ID AS STRING))), '')))) AS STRING) AS ORDER_PK
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    RECORD_SOURCE,
+    LOAD_DATE,
+    EFFECTIVE_FROM,
+    TRANSACTION_PK,
+    CUSTOMER_PK,
+    ORDER_PK
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select;
+
+
+[0m20:05:46.825188 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:e3dff855-254b-4d48-a572-5ae6be0c1a03&page=queryresults
+[0m20:05:47.703858 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14203fe20>]}
+[0m20:05:47.705153 [info ] [Thread-1 (]: 5 of 33 OK created sql view model dbt_dataset.v_stg_transactions ............... [[32mCREATE VIEW (0 processed)[0m in 2.97s]
+[0m20:05:47.705940 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_transactions
+[0m20:05:47.706561 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_inventory
+[0m20:05:47.707436 [info ] [Thread-1 (]: 6 of 33 START sql view model dbt_dataset.v_stg_inventory ....................... [RUN]
+[0m20:05:47.708333 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_transactions, now model.dbt_bq_sa.v_stg_inventory)
+[0m20:05:47.708790 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_inventory
+[0m20:05:47.718244 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:49.180296 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_inventory"
+[0m20:05:49.182927 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_inventory
+[0m20:05:49.186516 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_inventory"
+[0m20:05:49.187639 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    SUPPLIER_NATION_KEY AS NATION_KEY,
+    SUPPLIER_REGION_KEY AS REGION_KEY,
+    'TPCH-INVENTORY' AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ACCTBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_PHONE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_BRAND AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_CONTAINER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_MFGR AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_RETAILPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SIZE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_TYPE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS PART_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(AVAILQTY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SUPPLY_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLYCOST AS STRING))), ''), '^^')
+    )))) AS STRING) AS INVENTORY_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    SUPPLIER_PK,
+    SUPPLIER_NATION_PK,
+    SUPPLIER_REGION_PK,
+    REGION_PK,
+    NATION_PK,
+    NATION_REGION_PK,
+    LINK_SUPPLIER_NATION_PK,
+    PART_PK,
+    INVENTORY_PK,
+    SUPPLIER_HASHDIFF,
+    PART_HASHDIFF,
+    SUPPLIER_REGION_HASHDIFF,
+    SUPPLIER_NATION_HASHDIFF,
+    INVENTORY_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS EFFECTIVE_FROM
+FROM staging;
+
+
+[0m20:05:49.940099 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:5594cab1-567b-45d7-96fb-dbf77d7897a7&page=queryresults
+[0m20:05:50.829630 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14203fe20>]}
+[0m20:05:50.831566 [info ] [Thread-1 (]: 6 of 33 OK created sql view model dbt_dataset.v_stg_inventory .................. [[32mCREATE VIEW (0 processed)[0m in 3.12s]
+[0m20:05:50.833035 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_inventory
+[0m20:05:50.833742 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_inventory1
+[0m20:05:50.835209 [info ] [Thread-1 (]: 7 of 33 START sql view model dbt_dataset.v_stg_inventory1 ...................... [RUN]
+[0m20:05:50.835991 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_inventory, now model.dbt_bq_sa.v_stg_inventory1)
+[0m20:05:50.836534 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_inventory1
+[0m20:05:50.847756 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:52.277830 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_inventory1"
+[0m20:05:52.279547 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_inventory1
+[0m20:05:52.283058 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_inventory1"
+[0m20:05:52.283960 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_inventory1: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_inventory1"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory1`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    SUPPLIER_NATION_KEY AS NATION_KEY,
+    SUPPLIER_REGION_KEY AS REGION_KEY,
+    'TPCH-INVENTORY' AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ACCTBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_PHONE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_BRAND AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_CONTAINER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_MFGR AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_RETAILPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SIZE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_TYPE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS PART_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(AVAILQTY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SUPPLY_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLYCOST AS STRING))), ''), '^^')
+    )))) AS STRING) AS INVENTORY_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    SUPPLIER_PK,
+    SUPPLIER_NATION_PK,
+    SUPPLIER_REGION_PK,
+    REGION_PK,
+    NATION_PK,
+    NATION_REGION_PK,
+    LINK_SUPPLIER_NATION_PK,
+    PART_PK,
+    INVENTORY_PK,
+    SUPPLIER_HASHDIFF,
+    PART_HASHDIFF,
+    SUPPLIER_REGION_HASHDIFF,
+    SUPPLIER_NATION_HASHDIFF,
+    INVENTORY_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS EFFECTIVE_FROM
+FROM staging;
+
+
+[0m20:05:53.028854 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:6591d633-0481-4988-99c5-6485a6ac300a&page=queryresults
+[0m20:05:53.893569 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106623700>]}
+[0m20:05:53.895416 [info ] [Thread-1 (]: 7 of 33 OK created sql view model dbt_dataset.v_stg_inventory1 ................. [[32mCREATE VIEW (0 processed)[0m in 3.06s]
+[0m20:05:53.896383 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_inventory1
+[0m20:05:53.897056 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_inventory2
+[0m20:05:53.898007 [info ] [Thread-1 (]: 8 of 33 START sql view model dbt_dataset.v_stg_inventory2 ...................... [RUN]
+[0m20:05:53.898813 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_inventory1, now model.dbt_bq_sa.v_stg_inventory2)
+[0m20:05:53.899427 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_inventory2
+[0m20:05:53.910664 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:55.323224 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_inventory2"
+[0m20:05:55.324058 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_inventory2
+[0m20:05:55.327478 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_inventory2"
+[0m20:05:55.328377 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_inventory2: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_inventory2"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory2`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    SUPPLIER_NATION_KEY AS NATION_KEY,
+    SUPPLIER_REGION_KEY AS REGION_KEY,
+    'TPCH-INVENTORY' AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ACCTBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_PHONE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_BRAND AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_CONTAINER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_MFGR AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_RETAILPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SIZE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_TYPE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS PART_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(AVAILQTY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SUPPLY_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLYCOST AS STRING))), ''), '^^')
+    )))) AS STRING) AS INVENTORY_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    SUPPLIER_PK,
+    SUPPLIER_NATION_PK,
+    SUPPLIER_REGION_PK,
+    REGION_PK,
+    NATION_PK,
+    NATION_REGION_PK,
+    LINK_SUPPLIER_NATION_PK,
+    PART_PK,
+    INVENTORY_PK,
+    SUPPLIER_HASHDIFF,
+    PART_HASHDIFF,
+    SUPPLIER_REGION_HASHDIFF,
+    SUPPLIER_NATION_HASHDIFF,
+    INVENTORY_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS EFFECTIVE_FROM
+FROM staging;
+
+
+[0m20:05:56.080608 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:a05f99e4-82cd-4ab1-bb6d-9234519df359&page=queryresults
+[0m20:05:57.013238 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:05:57.014338 [info ] [Thread-1 (]: 8 of 33 OK created sql view model dbt_dataset.v_stg_inventory2 ................. [[32mCREATE VIEW (0 processed)[0m in 3.11s]
+[0m20:05:57.015070 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_inventory2
+[0m20:05:57.015583 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_customer
+[0m20:05:57.016309 [info ] [Thread-1 (]: 9 of 33 START sql view model dbt_dataset.hub_customer .......................... [RUN]
+[0m20:05:57.016959 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_inventory2, now model.dbt_bq_sa.hub_customer)
+[0m20:05:57.017531 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_customer
+[0m20:05:57.044048 [info ] [Thread-1 (]: 20:05:57 + Loading trim-field-467501-p5.dbt_dataset.hub_customer from 1 source(s)
+[0m20:05:57.087219 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_customer"
+[0m20:05:57.088081 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_customer
+[0m20:05:57.090414 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_customer"
+[0m20:05:57.090820 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_customer: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_customer"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_customer`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.CUSTOMER_PK, rr.CUSTOMERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.CUSTOMER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.CUSTOMER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:05:57.091065 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:58.241710 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:95ba39d8-1ded-41e2-a6ca-7491194e70e4&page=queryresults
+[0m20:05:59.160240 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106623700>]}
+[0m20:05:59.161326 [info ] [Thread-1 (]: 9 of 33 OK created sql view model dbt_dataset.hub_customer ..................... [[32mCREATE VIEW (0 processed)[0m in 2.14s]
+[0m20:05:59.161859 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_customer
+[0m20:05:59.162331 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_lineitem
+[0m20:05:59.162867 [info ] [Thread-1 (]: 10 of 33 START sql view model dbt_dataset.hub_lineitem ......................... [RUN]
+[0m20:05:59.163219 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_customer, now model.dbt_bq_sa.hub_lineitem)
+[0m20:05:59.163457 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_lineitem
+[0m20:05:59.168789 [info ] [Thread-1 (]: 20:05:59 + Loading trim-field-467501-p5.dbt_dataset.hub_lineitem from 1 source(s)
+[0m20:05:59.171089 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_lineitem"
+[0m20:05:59.171660 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_lineitem
+[0m20:05:59.178019 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_lineitem"
+[0m20:05:59.179041 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_lineitem: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_lineitem"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_lineitem`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINEITEM_PK, rr.LINENUMBER, rr.ORDERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINEITEM_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.LINEITEM_PK, a.LINENUMBER, a.ORDERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:05:59.179370 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:00.487433 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:88add5fb-3b0f-47e7-9b3b-dc95b2e10166&page=queryresults
+[0m20:06:01.519350 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141b3fa90>]}
+[0m20:06:01.519919 [info ] [Thread-1 (]: 10 of 33 OK created sql view model dbt_dataset.hub_lineitem .................... [[32mCREATE VIEW (0 processed)[0m in 2.36s]
+[0m20:06:01.520333 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_lineitem
+[0m20:06:01.520612 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_order
+[0m20:06:01.521006 [info ] [Thread-1 (]: 11 of 33 START sql view model dbt_dataset.hub_order ............................ [RUN]
+[0m20:06:01.521346 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_lineitem, now model.dbt_bq_sa.hub_order)
+[0m20:06:01.521605 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_order
+[0m20:06:01.526010 [info ] [Thread-1 (]: 20:06:01 + Loading trim-field-467501-p5.dbt_dataset.hub_order from 1 source(s)
+[0m20:06:01.528353 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_order"
+[0m20:06:01.528868 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_order
+[0m20:06:01.534101 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_order"
+[0m20:06:01.534844 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_order: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_order"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_order`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.ORDER_PK, rr.ORDERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.ORDER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.ORDER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.ORDER_PK, a.ORDERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:01.535209 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:02.644190 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:a9173ce0-3267-4985-8d71-c01c9aadef6d&page=queryresults
+[0m20:06:03.529447 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106174a60>]}
+[0m20:06:03.535863 [info ] [Thread-1 (]: 11 of 33 OK created sql view model dbt_dataset.hub_order ....................... [[32mCREATE VIEW (0 processed)[0m in 2.01s]
+[0m20:06:03.537750 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_order
+[0m20:06:03.538298 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_customer_nation
+[0m20:06:03.539387 [info ] [Thread-1 (]: 12 of 33 START sql view model dbt_dataset.link_customer_nation ................. [RUN]
+[0m20:06:03.540158 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_order, now model.dbt_bq_sa.link_customer_nation)
+[0m20:06:03.541671 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_customer_nation
+[0m20:06:03.560990 [info ] [Thread-1 (]: 20:06:03 + Loading trim-field-467501-p5.dbt_dataset.link_customer_nation from 1 source(s)
+[0m20:06:03.577972 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_customer_nation"
+[0m20:06:03.578705 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_customer_nation
+[0m20:06:03.587254 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_customer_nation"
+[0m20:06:03.589507 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_customer_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_customer_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_customer_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_CUSTOMER_NATION_PK, rr.CUSTOMER_PK, rr.NATION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_CUSTOMER_NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINK_CUSTOMER_NATION_PK IS NOT NULL
+    AND rr.CUSTOMER_PK IS NOT NULL
+    AND rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_CUSTOMER_NATION_PK, a.CUSTOMER_PK, a.NATION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:03.590090 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:04.732141 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:ed1e729f-dcc6-4557-9126-1cd954d60c1e&page=queryresults
+[0m20:06:05.639299 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:05.641020 [info ] [Thread-1 (]: 12 of 33 OK created sql view model dbt_dataset.link_customer_nation ............ [[32mCREATE VIEW (0 processed)[0m in 2.10s]
+[0m20:06:05.641976 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_customer_nation
+[0m20:06:05.642635 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_customer_order
+[0m20:06:05.643533 [info ] [Thread-1 (]: 13 of 33 START sql view model dbt_dataset.link_customer_order .................. [RUN]
+[0m20:06:05.644387 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_customer_nation, now model.dbt_bq_sa.link_customer_order)
+[0m20:06:05.645006 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_customer_order
+[0m20:06:05.653594 [info ] [Thread-1 (]: 20:06:05 + Loading trim-field-467501-p5.dbt_dataset.link_customer_order from 1 source(s)
+[0m20:06:05.660073 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_customer_order"
+[0m20:06:05.661236 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_customer_order
+[0m20:06:05.665761 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_customer_order"
+[0m20:06:05.667939 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_customer_order: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_customer_order"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_customer_order`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.ORDER_CUSTOMER_PK, rr.CUSTOMER_PK, rr.ORDER_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.ORDER_CUSTOMER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.ORDER_CUSTOMER_PK IS NOT NULL
+    AND rr.CUSTOMER_PK IS NOT NULL
+    AND rr.ORDER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.ORDER_CUSTOMER_PK, a.CUSTOMER_PK, a.ORDER_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:05.668635 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:06.941731 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:94e599d2-99fc-483d-b951-6fd2003e8885&page=queryresults
+[0m20:06:07.876512 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106174a60>]}
+[0m20:06:07.878123 [info ] [Thread-1 (]: 13 of 33 OK created sql view model dbt_dataset.link_customer_order ............. [[32mCREATE VIEW (0 processed)[0m in 2.23s]
+[0m20:06:07.878761 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_customer_order
+[0m20:06:07.879289 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_inventory_allocation
+[0m20:06:07.880063 [info ] [Thread-1 (]: 14 of 33 START sql view model dbt_dataset.link_inventory_allocation ............ [RUN]
+[0m20:06:07.880577 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_customer_order, now model.dbt_bq_sa.link_inventory_allocation)
+[0m20:06:07.880909 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_inventory_allocation
+[0m20:06:07.888867 [info ] [Thread-1 (]: 20:06:07 + Loading trim-field-467501-p5.dbt_dataset.link_inventory_allocation from 1 source(s)
+[0m20:06:07.895730 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_inventory_allocation"
+[0m20:06:07.896521 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_inventory_allocation
+[0m20:06:07.899955 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_inventory_allocation"
+[0m20:06:07.900702 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_inventory_allocation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_inventory_allocation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_inventory_allocation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.INVENTORY_ALLOCATION_PK, rr.PART_PK, rr.SUPPLIER_PK, rr.LINEITEM_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.INVENTORY_ALLOCATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.INVENTORY_ALLOCATION_PK IS NOT NULL
+    AND rr.PART_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.INVENTORY_ALLOCATION_PK, a.PART_PK, a.SUPPLIER_PK, a.LINEITEM_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:07.901231 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:09.004071 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:5f65edcc-fb5b-4272-8a0c-9d4b97e8bc78&page=queryresults
+[0m20:06:09.823105 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:09.824288 [info ] [Thread-1 (]: 14 of 33 OK created sql view model dbt_dataset.link_inventory_allocation ....... [[32mCREATE VIEW (0 processed)[0m in 1.94s]
+[0m20:06:09.825181 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_inventory_allocation
+[0m20:06:09.825865 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_order_lineitem
+[0m20:06:09.826984 [info ] [Thread-1 (]: 15 of 33 START sql view model dbt_dataset.link_order_lineitem .................. [RUN]
+[0m20:06:09.827631 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_inventory_allocation, now model.dbt_bq_sa.link_order_lineitem)
+[0m20:06:09.828090 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_order_lineitem
+[0m20:06:09.838693 [info ] [Thread-1 (]: 20:06:09 + Loading trim-field-467501-p5.dbt_dataset.link_order_lineitem from 1 source(s)
+[0m20:06:09.843277 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_order_lineitem"
+[0m20:06:09.844565 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_order_lineitem
+[0m20:06:09.849156 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_order_lineitem"
+[0m20:06:09.850263 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_order_lineitem: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_order_lineitem"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_order_lineitem`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_LINEITEM_ORDER_PK, rr.ORDER_PK, rr.LINEITEM_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_LINEITEM_ORDER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINK_LINEITEM_ORDER_PK IS NOT NULL
+    AND rr.ORDER_PK IS NOT NULL
+    AND rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_LINEITEM_ORDER_PK, a.ORDER_PK, a.LINEITEM_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:09.850781 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:10.836209 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:53f2c791-195b-4edd-ad1f-0ff3957f25d0&page=queryresults
+[0m20:06:11.668799 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106174a60>]}
+[0m20:06:11.670045 [info ] [Thread-1 (]: 15 of 33 OK created sql view model dbt_dataset.link_order_lineitem ............. [[32mCREATE VIEW (0 processed)[0m in 1.84s]
+[0m20:06:11.670964 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_order_lineitem
+[0m20:06:11.671599 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m20:06:11.672357 [info ] [Thread-1 (]: 16 of 33 START sql view model dbt_dataset.sat_order_cust_nation_details ........ [RUN]
+[0m20:06:11.672996 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_order_lineitem, now model.dbt_bq_sa.sat_order_cust_nation_details)
+[0m20:06:11.673538 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m20:06:11.723408 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_cust_nation_details"
+[0m20:06:11.724166 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m20:06:11.727010 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_cust_nation_details"
+[0m20:06:11.727485 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_cust_nation_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_cust_nation_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_cust_nation_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_NATION_HASHDIFF, a.CUSTOMER_NATION_NAME, a.CUSTOMER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_NATION_HASHDIFF, stage.CUSTOMER_NATION_NAME, stage.CUSTOMER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:11.727797 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:12.855329 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:fcfd1d1a-daa5-4017-a383-db750d48ed66&page=queryresults
+[0m20:06:13.675561 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141363f40>]}
+[0m20:06:13.676267 [info ] [Thread-1 (]: 16 of 33 OK created sql view model dbt_dataset.sat_order_cust_nation_details ... [[32mCREATE VIEW (0 processed)[0m in 2.00s]
+[0m20:06:13.676691 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m20:06:13.676995 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_cust_region_details
+[0m20:06:13.677277 [info ] [Thread-1 (]: 17 of 33 START sql view model dbt_dataset.sat_order_cust_region_details ........ [RUN]
+[0m20:06:13.677578 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_cust_nation_details, now model.dbt_bq_sa.sat_order_cust_region_details)
+[0m20:06:13.677799 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_cust_region_details
+[0m20:06:13.689535 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_cust_region_details"
+[0m20:06:13.692469 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_cust_region_details
+[0m20:06:13.700027 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_cust_region_details"
+[0m20:06:13.700724 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_cust_region_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_cust_region_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_cust_region_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_REGION_HASHDIFF, a.CUSTOMER_REGION_NAME, a.CUSTOMER_REGION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_REGION_HASHDIFF, stage.CUSTOMER_REGION_NAME, stage.CUSTOMER_REGION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:13.701088 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:14.823562 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:7d6d8d38-6a70-4c20-8000-59a9565efbf3&page=queryresults
+[0m20:06:15.646898 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142248160>]}
+[0m20:06:15.648090 [info ] [Thread-1 (]: 17 of 33 OK created sql view model dbt_dataset.sat_order_cust_region_details ... [[32mCREATE VIEW (0 processed)[0m in 1.97s]
+[0m20:06:15.648977 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_cust_region_details
+[0m20:06:15.649579 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_customer_details
+[0m20:06:15.650499 [info ] [Thread-1 (]: 18 of 33 START sql view model dbt_dataset.sat_order_customer_details ........... [RUN]
+[0m20:06:15.651304 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_cust_region_details, now model.dbt_bq_sa.sat_order_customer_details)
+[0m20:06:15.651916 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_customer_details
+[0m20:06:15.669168 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_customer_details"
+[0m20:06:15.670114 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_customer_details
+[0m20:06:15.674529 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_customer_details"
+[0m20:06:15.675307 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_customer_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_customer_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_customer_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_HASHDIFF, a.CUSTOMER_NAME, a.CUSTOMER_ADDRESS, a.CUSTOMER_PHONE, a.CUSTOMER_ACCBAL, a.CUSTOMER_MKTSEGMENT, a.CUSTOMER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_HASHDIFF, stage.CUSTOMER_NAME, stage.CUSTOMER_ADDRESS, stage.CUSTOMER_PHONE, stage.CUSTOMER_ACCBAL, stage.CUSTOMER_MKTSEGMENT, stage.CUSTOMER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:15.675746 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:16.742072 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:7845fc69-c134-4c84-a139-0d27b077ecf7&page=queryresults
+[0m20:06:17.585639 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142248160>]}
+[0m20:06:17.587297 [info ] [Thread-1 (]: 18 of 33 OK created sql view model dbt_dataset.sat_order_customer_details ...... [[32mCREATE VIEW (0 processed)[0m in 1.93s]
+[0m20:06:17.588377 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_customer_details
+[0m20:06:17.589116 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_lineitem_details
+[0m20:06:17.590190 [info ] [Thread-1 (]: 19 of 33 START sql view model dbt_dataset.sat_order_lineitem_details ........... [RUN]
+[0m20:06:17.591031 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_customer_details, now model.dbt_bq_sa.sat_order_lineitem_details)
+[0m20:06:17.591659 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_lineitem_details
+[0m20:06:17.613904 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_lineitem_details"
+[0m20:06:17.615017 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_lineitem_details
+[0m20:06:17.618849 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_lineitem_details"
+[0m20:06:17.619521 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_lineitem_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_lineitem_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_lineitem_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.LINEITEM_PK, a.LINEITEM_HASHDIFF, a.COMMITDATE, a.DISCOUNT, a.EXTENDEDPRICE, a.LINE_COMMENT, a.QUANTITY, a.RECEIPTDATE, a.RETURNFLAG, a.SHIPDATE, a.SHIPINSTRUCT, a.SHIPMODE, a.TAX, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.LINEITEM_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.LINEITEM_PK, stage.LINEITEM_HASHDIFF, stage.COMMITDATE, stage.DISCOUNT, stage.EXTENDEDPRICE, stage.LINE_COMMENT, stage.QUANTITY, stage.RECEIPTDATE, stage.RETURNFLAG, stage.SHIPDATE, stage.SHIPINSTRUCT, stage.SHIPMODE, stage.TAX, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:17.619948 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:18.596311 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:bcb54efc-863d-40e7-b342-3110a4b1f7bf&page=queryresults
+[0m20:06:19.418817 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:19.420352 [info ] [Thread-1 (]: 19 of 33 OK created sql view model dbt_dataset.sat_order_lineitem_details ...... [[32mCREATE VIEW (0 processed)[0m in 1.83s]
+[0m20:06:19.421302 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_lineitem_details
+[0m20:06:19.421955 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_order_details
+[0m20:06:19.422829 [info ] [Thread-1 (]: 20 of 33 START sql view model dbt_dataset.sat_order_order_details .............. [RUN]
+[0m20:06:19.423656 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_lineitem_details, now model.dbt_bq_sa.sat_order_order_details)
+[0m20:06:19.424299 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_order_details
+[0m20:06:19.442651 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_order_details"
+[0m20:06:19.443567 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_order_details
+[0m20:06:19.447678 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_order_details"
+[0m20:06:19.448389 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_order_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_order_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_order_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.ORDER_PK, a.ORDER_HASHDIFF, a.ORDERSTATUS, a.TOTALPRICE, a.ORDERDATE, a.ORDERPRIORITY, a.CLERK, a.SHIPPRIORITY, a.ORDER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.ORDER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.ORDER_PK, stage.ORDER_HASHDIFF, stage.ORDERSTATUS, stage.TOTALPRICE, stage.ORDERDATE, stage.ORDERPRIORITY, stage.CLERK, stage.SHIPPRIORITY, stage.ORDER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:19.448822 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:20.624663 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:9d69c411-e2f8-47d9-adda-4094d9ab9bc6&page=queryresults
+[0m20:06:21.470825 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1421993f0>]}
+[0m20:06:21.472314 [info ] [Thread-1 (]: 20 of 33 OK created sql view model dbt_dataset.sat_order_order_details ......... [[32mCREATE VIEW (0 processed)[0m in 2.05s]
+[0m20:06:21.473365 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_order_details
+[0m20:06:21.473847 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.t_link_transactions
+[0m20:06:21.474302 [info ] [Thread-1 (]: 21 of 33 START sql view model dbt_dataset.t_link_transactions .................. [RUN]
+[0m20:06:21.474681 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_order_details, now model.dbt_bq_sa.t_link_transactions)
+[0m20:06:21.474956 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.t_link_transactions
+[0m20:06:21.496168 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.t_link_transactions"
+[0m20:06:21.498700 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.t_link_transactions
+[0m20:06:21.502119 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.t_link_transactions"
+[0m20:06:21.502799 [debug] [Thread-1 (]: On model.dbt_bq_sa.t_link_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.t_link_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`t_link_transactions`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH stage AS (
+    SELECT TRANSACTION_PK, CUSTOMER_PK, ORDER_PK, TRANSACTION_NUMBER, TRANSACTION_DATE, TYPE, AMOUNT, EFFECTIVE_FROM, LOAD_DATE, RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_transactions`
+    WHERE TRANSACTION_PK IS NOT NULL
+    AND CUSTOMER_PK IS NOT NULL
+    AND ORDER_PK IS NOT NULL
+),
+records_to_insert AS (
+    SELECT DISTINCT stg.TRANSACTION_PK, stg.CUSTOMER_PK, stg.ORDER_PK, stg.TRANSACTION_NUMBER, stg.TRANSACTION_DATE, stg.TYPE, stg.AMOUNT, stg.EFFECTIVE_FROM, stg.LOAD_DATE, stg.RECORD_SOURCE
+    FROM stage AS stg
+    
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:21.503161 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:22.669293 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:792b1d6e-628f-4a6b-95d4-39033f29ea4c&page=queryresults
+[0m20:06:23.495185 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:23.497365 [info ] [Thread-1 (]: 21 of 33 OK created sql view model dbt_dataset.t_link_transactions ............. [[32mCREATE VIEW (0 processed)[0m in 2.02s]
+[0m20:06:23.498430 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.t_link_transactions
+[0m20:06:23.499229 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_nation
+[0m20:06:23.500369 [info ] [Thread-1 (]: 22 of 33 START sql view model dbt_dataset.hub_nation ........................... [RUN]
+[0m20:06:23.501063 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.t_link_transactions, now model.dbt_bq_sa.hub_nation)
+[0m20:06:23.501654 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_nation
+[0m20:06:23.520640 [info ] [Thread-1 (]: 20:06:23 + Loading trim-field-467501-p5.dbt_dataset.hub_nation from 2 source(s)
+[0m20:06:23.530458 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_nation"
+[0m20:06:23.532877 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_nation
+[0m20:06:23.537637 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_nation"
+[0m20:06:23.538470 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.NATION_PK, rr.NATION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.NATION_PK, rr.NATION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.NATION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.NATION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.NATION_PK, a.NATION_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:23.538957 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:24.627718 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:4ffcb3b8-db78-4935-8cc7-dafa44b77c87&page=queryresults
+[0m20:06:25.400347 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:25.402347 [info ] [Thread-1 (]: 22 of 33 OK created sql view model dbt_dataset.hub_nation ...................... [[32mCREATE VIEW (0 processed)[0m in 1.90s]
+[0m20:06:25.404030 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_nation
+[0m20:06:25.404731 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_part
+[0m20:06:25.405689 [info ] [Thread-1 (]: 23 of 33 START sql view model dbt_dataset.hub_part ............................. [RUN]
+[0m20:06:25.406601 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_nation, now model.dbt_bq_sa.hub_part)
+[0m20:06:25.407224 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_part
+[0m20:06:25.416158 [info ] [Thread-1 (]: 20:06:25 + Loading trim-field-467501-p5.dbt_dataset.hub_part from 2 source(s)
+[0m20:06:25.422752 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_part"
+[0m20:06:25.423906 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_part
+[0m20:06:25.430752 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_part"
+[0m20:06:25.431867 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_part: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_part"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_part`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.PART_PK, rr.PARTKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.PART_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.PART_PK, rr.PARTKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.PART_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.PART_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.PART_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.PART_PK, a.PARTKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:25.432396 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:26.507932 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:c78ac672-7cfe-40ca-9610-cb28ff8632ae&page=queryresults
+[0m20:06:27.363981 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:28.891505 [debug] [Thread-1 (]: An error was encountered while trying to send an event
+[0m20:06:28.893034 [info ] [Thread-1 (]: 23 of 33 OK created sql view model dbt_dataset.hub_part ........................ [[32mCREATE VIEW (0 processed)[0m in 1.96s]
+[0m20:06:28.893723 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_part
+[0m20:06:28.894182 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_region
+[0m20:06:28.894788 [info ] [Thread-1 (]: 24 of 33 START sql view model dbt_dataset.hub_region ........................... [RUN]
+[0m20:06:28.895462 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_part, now model.dbt_bq_sa.hub_region)
+[0m20:06:28.895910 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_region
+[0m20:06:28.902934 [info ] [Thread-1 (]: 20:06:28 + Loading trim-field-467501-p5.dbt_dataset.hub_region from 2 source(s)
+[0m20:06:28.908039 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_region"
+[0m20:06:28.909074 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_region
+[0m20:06:28.912856 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_region"
+[0m20:06:28.913570 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_region: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_region"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_region`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.REGION_PK, rr.REGION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.REGION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.REGION_PK, rr.REGION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.REGION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.REGION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.REGION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.REGION_PK, a.REGION_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:28.913978 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:30.076039 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:6b56c6f5-5c8a-41e6-829d-ea5e8eb14bfb&page=queryresults
+[0m20:06:31.014481 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:31.015860 [info ] [Thread-1 (]: 24 of 33 OK created sql view model dbt_dataset.hub_region ...................... [[32mCREATE VIEW (0 processed)[0m in 2.12s]
+[0m20:06:31.016816 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_region
+[0m20:06:31.017468 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_supplier
+[0m20:06:31.018465 [info ] [Thread-1 (]: 25 of 33 START sql view model dbt_dataset.hub_supplier ......................... [RUN]
+[0m20:06:31.019311 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_region, now model.dbt_bq_sa.hub_supplier)
+[0m20:06:31.019945 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_supplier
+[0m20:06:31.031096 [info ] [Thread-1 (]: 20:06:31 + Loading trim-field-467501-p5.dbt_dataset.hub_supplier from 2 source(s)
+[0m20:06:31.037415 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_supplier"
+[0m20:06:31.038419 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_supplier
+[0m20:06:31.042724 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_supplier"
+[0m20:06:31.043572 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_supplier: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_supplier"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_supplier`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.SUPPLIER_PK, rr.SUPPLIERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.SUPPLIER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.SUPPLIER_PK, rr.SUPPLIERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.SUPPLIER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.SUPPLIER_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:31.044086 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:32.101257 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:64e92fa4-e810-42f8-88fe-1a6fdbfcde7d&page=queryresults
+[0m20:06:32.936318 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:32.938435 [info ] [Thread-1 (]: 25 of 33 OK created sql view model dbt_dataset.hub_supplier .................... [[32mCREATE VIEW (0 processed)[0m in 1.92s]
+[0m20:06:32.939847 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_supplier
+[0m20:06:32.940722 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_inventory
+[0m20:06:32.941678 [info ] [Thread-1 (]: 26 of 33 START sql view model dbt_dataset.link_inventory ....................... [RUN]
+[0m20:06:32.942563 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_supplier, now model.dbt_bq_sa.link_inventory)
+[0m20:06:32.943181 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_inventory
+[0m20:06:32.952402 [info ] [Thread-1 (]: 20:06:32 + Loading trim-field-467501-p5.dbt_dataset.link_inventory from 1 source(s)
+[0m20:06:32.957773 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_inventory"
+[0m20:06:32.958733 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_inventory
+[0m20:06:32.964586 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_inventory"
+[0m20:06:32.965394 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_inventory`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.INVENTORY_PK, rr.SUPPLIER_PK, rr.PART_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.INVENTORY_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.INVENTORY_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.INVENTORY_PK, a.SUPPLIER_PK, a.PART_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:32.965883 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:34.043225 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:5f2b7336-f4b5-49a5-8304-a5a253cb2285&page=queryresults
+[0m20:06:34.849331 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:34.850974 [info ] [Thread-1 (]: 26 of 33 OK created sql view model dbt_dataset.link_inventory .................. [[32mCREATE VIEW (0 processed)[0m in 1.91s]
+[0m20:06:34.851945 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_inventory
+[0m20:06:34.852647 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_nation_region
+[0m20:06:34.853564 [info ] [Thread-1 (]: 27 of 33 START sql view model dbt_dataset.link_nation_region ................... [RUN]
+[0m20:06:34.854421 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_inventory, now model.dbt_bq_sa.link_nation_region)
+[0m20:06:34.855055 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_nation_region
+[0m20:06:34.868885 [info ] [Thread-1 (]: 20:06:34 + Loading trim-field-467501-p5.dbt_dataset.link_nation_region from 2 source(s)
+[0m20:06:34.875238 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_nation_region"
+[0m20:06:34.876096 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_nation_region
+[0m20:06:34.880930 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_nation_region"
+[0m20:06:34.881940 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_nation_region: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_nation_region"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_nation_region`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.NATION_REGION_PK, rr.NATION_PK, rr.REGION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.NATION_REGION_PK, rr.NATION_PK, rr.REGION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    QUALIFY row_number = 1
+),
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.NATION_REGION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.NATION_REGION_PK IS NOT NULL
+    AND ru.NATION_PK IS NOT NULL
+    AND ru.REGION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.NATION_REGION_PK, a.NATION_PK, a.REGION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:34.882478 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:36.232075 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:ff04a6d0-f615-4fd8-8b81-44330a832432&page=queryresults
+[0m20:06:37.059125 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:37.061113 [info ] [Thread-1 (]: 27 of 33 OK created sql view model dbt_dataset.link_nation_region .............. [[32mCREATE VIEW (0 processed)[0m in 2.20s]
+[0m20:06:37.062653 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_nation_region
+[0m20:06:37.063291 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_supplier_nation
+[0m20:06:37.064124 [info ] [Thread-1 (]: 28 of 33 START sql view model dbt_dataset.link_supplier_nation ................. [RUN]
+[0m20:06:37.064974 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_nation_region, now model.dbt_bq_sa.link_supplier_nation)
+[0m20:06:37.065598 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_supplier_nation
+[0m20:06:37.079576 [info ] [Thread-1 (]: 20:06:37 + Loading trim-field-467501-p5.dbt_dataset.link_supplier_nation from 1 source(s)
+[0m20:06:37.085168 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_supplier_nation"
+[0m20:06:37.086111 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_supplier_nation
+[0m20:06:37.090743 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_supplier_nation"
+[0m20:06:37.091683 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_supplier_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_supplier_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_supplier_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_SUPPLIER_NATION_PK, rr.SUPPLIER_PK, rr.NATION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_SUPPLIER_NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.LINK_SUPPLIER_NATION_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_SUPPLIER_NATION_PK, a.SUPPLIER_PK, a.NATION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:37.092177 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:38.270809 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:92ce8060-0622-4f94-82ca-3a23e7d48323&page=queryresults
+[0m20:06:39.107433 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:39.109280 [info ] [Thread-1 (]: 28 of 33 OK created sql view model dbt_dataset.link_supplier_nation ............ [[32mCREATE VIEW (0 processed)[0m in 2.04s]
+[0m20:06:39.110444 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_supplier_nation
+[0m20:06:39.111096 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_inventory_details
+[0m20:06:39.111984 [info ] [Thread-1 (]: 29 of 33 START sql view model dbt_dataset.sat_inv_inventory_details ............ [RUN]
+[0m20:06:39.112809 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_supplier_nation, now model.dbt_bq_sa.sat_inv_inventory_details)
+[0m20:06:39.113425 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_inventory_details
+[0m20:06:39.131114 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_inventory_details"
+[0m20:06:39.132179 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_inventory_details
+[0m20:06:39.137701 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_inventory_details"
+[0m20:06:39.138527 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_inventory_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_inventory_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_inventory_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.INVENTORY_PK, a.INVENTORY_HASHDIFF, a.AVAILQTY, a.SUPPLYCOST, a.PART_SUPPLY_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.INVENTORY_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.INVENTORY_PK, stage.INVENTORY_HASHDIFF, stage.AVAILQTY, stage.SUPPLYCOST, stage.PART_SUPPLY_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:39.139029 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:40.187913 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:20753a31-432e-4846-b20e-04b1a03556f1&page=queryresults
+[0m20:06:41.131885 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1421387f0>]}
+[0m20:06:41.133490 [info ] [Thread-1 (]: 29 of 33 OK created sql view model dbt_dataset.sat_inv_inventory_details ....... [[32mCREATE VIEW (0 processed)[0m in 2.02s]
+[0m20:06:41.134541 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_inventory_details
+[0m20:06:41.135224 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_part_details
+[0m20:06:41.136102 [info ] [Thread-1 (]: 30 of 33 START sql view model dbt_dataset.sat_inv_part_details ................. [RUN]
+[0m20:06:41.136832 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_inventory_details, now model.dbt_bq_sa.sat_inv_part_details)
+[0m20:06:41.137405 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_part_details
+[0m20:06:41.157045 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_part_details"
+[0m20:06:41.158355 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_part_details
+[0m20:06:41.162812 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_part_details"
+[0m20:06:41.163950 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_part_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_part_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_part_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.PART_PK, a.PART_HASHDIFF, a.PART_NAME, a.PART_MFGR, a.PART_BRAND, a.PART_TYPE, a.PART_SIZE, a.PART_CONTAINER, a.PART_RETAILPRICE, a.PART_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.PART_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.PART_PK, stage.PART_HASHDIFF, stage.PART_NAME, stage.PART_MFGR, stage.PART_BRAND, stage.PART_TYPE, stage.PART_SIZE, stage.PART_CONTAINER, stage.PART_RETAILPRICE, stage.PART_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:41.164425 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:42.299630 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:27d22f24-3db8-4600-83d2-89b5e35da421&page=queryresults
+[0m20:06:43.127319 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1404c2080>]}
+[0m20:06:43.129296 [info ] [Thread-1 (]: 30 of 33 OK created sql view model dbt_dataset.sat_inv_part_details ............ [[32mCREATE VIEW (0 processed)[0m in 1.99s]
+[0m20:06:43.130242 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_part_details
+[0m20:06:43.130899 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m20:06:43.131760 [info ] [Thread-1 (]: 31 of 33 START sql view model dbt_dataset.sat_inv_supp_nation_details .......... [RUN]
+[0m20:06:43.132631 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_part_details, now model.dbt_bq_sa.sat_inv_supp_nation_details)
+[0m20:06:43.133240 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m20:06:43.151215 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supp_nation_details"
+[0m20:06:43.152497 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m20:06:43.156784 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supp_nation_details"
+[0m20:06:43.157562 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supp_nation_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supp_nation_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supp_nation_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_NATION_HASHDIFF, a.SUPPLIER_NATION_NAME, a.SUPPLIER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_NATION_HASHDIFF, stage.SUPPLIER_NATION_NAME, stage.SUPPLIER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:43.158052 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:44.517693 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:45d1ff90-52c4-4954-8af2-e16aedfb8cd6&page=queryresults
+[0m20:06:45.370799 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1421387f0>]}
+[0m20:06:45.372625 [info ] [Thread-1 (]: 31 of 33 OK created sql view model dbt_dataset.sat_inv_supp_nation_details ..... [[32mCREATE VIEW (0 processed)[0m in 2.24s]
+[0m20:06:45.373600 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m20:06:45.374232 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m20:06:45.375138 [info ] [Thread-1 (]: 32 of 33 START sql view model dbt_dataset.sat_inv_supp_region_details .......... [RUN]
+[0m20:06:45.375957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_supp_nation_details, now model.dbt_bq_sa.sat_inv_supp_region_details)
+[0m20:06:45.376582 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m20:06:45.392713 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supp_region_details"
+[0m20:06:45.393868 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m20:06:45.399562 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supp_region_details"
+[0m20:06:45.400383 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supp_region_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supp_region_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supp_region_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_NATION_HASHDIFF, a.SUPPLIER_NATION_NAME, a.SUPPLIER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_NATION_HASHDIFF, stage.SUPPLIER_NATION_NAME, stage.SUPPLIER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:45.400876 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:46.416212 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:5af62d83-aeca-4718-9920-cd45d964c8ee&page=queryresults
+[0m20:06:47.308109 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1421387f0>]}
+[0m20:06:47.309583 [info ] [Thread-1 (]: 32 of 33 OK created sql view model dbt_dataset.sat_inv_supp_region_details ..... [[32mCREATE VIEW (0 processed)[0m in 1.93s]
+[0m20:06:47.310516 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m20:06:47.311157 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supplier_details
+[0m20:06:47.312002 [info ] [Thread-1 (]: 33 of 33 START sql view model dbt_dataset.sat_inv_supplier_details ............. [RUN]
+[0m20:06:47.312820 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_supp_region_details, now model.dbt_bq_sa.sat_inv_supplier_details)
+[0m20:06:47.313435 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supplier_details
+[0m20:06:47.330633 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supplier_details"
+[0m20:06:47.331678 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supplier_details
+[0m20:06:47.335918 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supplier_details"
+[0m20:06:47.336800 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supplier_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supplier_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supplier_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_HASHDIFF, a.SUPPLIER_ADDRESS, a.SUPPLIER_PHONE, a.SUPPLIER_ACCTBAL, a.SUPPLIER_NAME, a.SUPPLIER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_HASHDIFF, stage.SUPPLIER_ADDRESS, stage.SUPPLIER_PHONE, stage.SUPPLIER_ACCTBAL, stage.SUPPLIER_NAME, stage.SUPPLIER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m20:06:47.337279 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:06:48.523976 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:007725e7-ae52-4ef0-ab0a-0a72aa0bb076&page=queryresults
+[0m20:06:49.407949 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cce3a638-4000-4c9d-84d5-e58106f17341', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142400be0>]}
+[0m20:06:49.409571 [info ] [Thread-1 (]: 33 of 33 OK created sql view model dbt_dataset.sat_inv_supplier_details ........ [[32mCREATE VIEW (0 processed)[0m in 2.09s]
+[0m20:06:49.410504 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supplier_details
+[0m20:06:49.414450 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:06:49.417220 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:06:49.417627 [debug] [MainThread]: Connection 'model.dbt_bq_sa.sat_inv_supplier_details' was properly closed.
+[0m20:06:49.418284 [info ] [MainThread]: 
+[0m20:06:49.418739 [info ] [MainThread]: Finished running 33 view models in 0 hours 1 minutes and 15.74 seconds (75.74s).
+[0m20:06:49.425187 [debug] [MainThread]: Command end result
+[0m20:06:49.478030 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/manifest.json
+[0m20:06:49.482432 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/semantic_manifest.json
+[0m20:06:49.490609 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/run_results.json
+[0m20:06:49.490947 [info ] [MainThread]: 
+[0m20:06:49.491209 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:06:49.491408 [info ] [MainThread]: 
+[0m20:06:49.491852 [info ] [MainThread]: Done. PASS=33 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=33
+[0m20:06:49.496085 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 78.65324, "process_in_blocks": "0", "process_kernel_time": 1.580839, "process_mem_max_rss": "344113152", "process_out_blocks": "0", "process_user_time": 7.166947}
+[0m20:06:49.496732 [debug] [MainThread]: Command `dbt run` succeeded at 20:06:49.496674 after 78.65 seconds
+[0m20:06:49.497032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056cf6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141bcab60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e50250>]}
+[0m20:06:49.497272 [debug] [MainThread]: Flushing usage events
+[0m20:06:50.902550 [debug] [MainThread]: An error was encountered while trying to flush usage events
