@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: tpch_sample
+    database: trim-field-467501-p5
+    schema: dbt_dataset
+    tables:
+      - name: lineitem
+      - name: customer
+      - name: orders
+      - name: partsupp
+      - name: supplier
+      - name: part
+      - name: nation
+      - name: region

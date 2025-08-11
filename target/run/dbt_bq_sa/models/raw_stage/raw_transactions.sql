@@ -1,0 +1,21 @@
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_transactions`
+  OPTIONS()
+  as SELECT
+    b.O_ORDERKEY AS ORDER_ID,
+    b.O_CUSTKEY AS CUSTOMER_ID,
+    b.O_ORDERDATE AS ORDER_DATE,
+    DATE_ADD(b.O_ORDERDATE, INTERVAL 20 DAY) AS TRANSACTION_DATE,
+    CAST(RPAD(CONCAT(CAST(b.O_ORDERKEY AS STRING), CAST(b.O_CUSTKEY AS STRING), FORMAT_DATE('%Y%m%d', b.O_ORDERDATE)), 24, '0') AS INT64) AS TRANSACTION_NUMBER,
+    b.O_TOTALPRICE AS AMOUNT,
+    CAST(
+        CASE FLOOR(RAND() * 2) + 1
+            WHEN 1 THEN 'DR'
+            WHEN 2 THEN 'CR'
+        END AS STRING) AS TYPE
+FROM `trim-field-467501-p5`.`dbt_dataset`.`orders` AS b
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`customer` AS c
+    ON b.O_CUSTKEY = c.C_CUSTKEY
+WHERE b.O_ORDERDATE = PARSE_DATE('%Y-%m-%d', '1992-01-08');
+
