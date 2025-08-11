@@ -1,0 +1,12 @@
+steps:
+  # Step 1: Copy all files from the repo to the Composer bucket DAGs folder
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "Copying DAGs to Composer bucket..."
+        gsutil -m cp -r * gs://us-central1-composerdbtdemo-6e637878-bucket/dags/
+
+options:
+  logging: CLOUD_LOGGING_ONLY
