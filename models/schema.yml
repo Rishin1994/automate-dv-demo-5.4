@@ -1,15 +1,10 @@
 version: 2
 
 sources:
-  - name: tpch_sample
-    database: trim-field-467501-p5
-    schema: dbt_dataset
+  - name: citibike_source_sql
+    schema: citibike_source_sql
     tables:
-      - name: lineitem
-      - name: customer
-      - name: orders
-      - name: partsupp
-      - name: supplier
-      - name: part
-      - name: nation
-      - name: region
+      - name: src_sql_users
+      - name: src_sql_bikes
+      - name: src_sql_trips
+      - name: src_sql_stations

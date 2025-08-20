@@ -10354,3 +10354,2327 @@ SELECT * FROM records_to_insert;
 [0m20:06:49.497032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056cf6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x141bcab60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e50250>]}
 [0m20:06:49.497272 [debug] [MainThread]: Flushing usage events
 [0m20:06:50.902550 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:07:09.792983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10864b700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a3304f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a330bb0>]}
+
+
+============================== 14:07:09.795932 | 55b3768c-c396-48ce-a9e5-14699aec73ef ==============================
+[0m14:07:09.795932 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:07:09.796249 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run -m hub_customer', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:07:09.796519 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m14:07:09.796717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '55b3768c-c396-48ce-a9e5-14699aec73ef', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2a5300>]}
+[0m14:07:14.115128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '55b3768c-c396-48ce-a9e5-14699aec73ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cc5d50>]}
+[0m14:07:14.147067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '55b3768c-c396-48ce-a9e5-14699aec73ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2a4940>]}
+[0m14:07:14.147454 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m14:07:14.314848 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:07:14.426095 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 3 files added, 1 files changed.
+[0m14:07:14.426494 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/raw_vault/hubs/eqqui_hub_customer.sql
+[0m14:07:14.426678 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/stage/equi_v_stg_transaction.sql
+[0m14:07:14.426838 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/raw_vault/links/equi_link_customer_nation.sql
+[0m14:07:14.426978 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory1.sql
+[0m14:07:14.427114 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory2.sql
+[0m14:07:14.427298 [debug] [MainThread]: Partial parsing: updated file: dbt_bq_sa://models/raw_vault/hubs/hub_customer.sql
+[0m14:07:14.590406 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_bq_sa.eqqui_hub_customer' (models/raw_vault/hubs/eqqui_hub_customer.sql) depends on a source named 'raw.v_stg_orders' which was not found
+[0m14:07:14.591381 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m14:07:14.622001 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 4.876288, "process_in_blocks": "0", "process_kernel_time": 1.064067, "process_mem_max_rss": "337723392", "process_out_blocks": "0", "process_user_time": 3.160642}
+[0m14:07:14.622451 [debug] [MainThread]: Command `dbt run` failed at 14:07:14.622380 after 4.88 seconds
+[0m14:07:14.622741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10864b700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16e0043d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16de81fc0>]}
+[0m14:07:14.623061 [debug] [MainThread]: Flushing usage events
+[0m14:07:15.823558 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:07:49.133427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10419f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052f84f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052fbfa0>]}
+
+
+============================== 14:07:49.136352 | 89cf7d90-2e75-45d3-81d7-67b05477cedd ==============================
+[0m14:07:49.136352 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:07:49.136665 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:07:51.334319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '89cf7d90-2e75-45d3-81d7-67b05477cedd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102975d50>]}
+[0m14:07:51.394098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '89cf7d90-2e75-45d3-81d7-67b05477cedd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105267a90>]}
+[0m14:07:51.394612 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m14:07:51.571664 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:07:51.677373 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 3 files added, 1 files changed.
+[0m14:07:51.677809 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/stage/equi_v_stg_transaction.sql
+[0m14:07:51.678018 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/raw_vault/hubs/eqqui_hub_customer.sql
+[0m14:07:51.678189 [debug] [MainThread]: Partial parsing: added file: dbt_bq_sa://models/raw_vault/links/equi_link_customer_nation.sql
+[0m14:07:51.678338 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory2.sql
+[0m14:07:51.678477 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory1.sql
+[0m14:07:51.678664 [debug] [MainThread]: Partial parsing: updated file: dbt_bq_sa://models/raw_vault/hubs/hub_customer.sql
+[0m14:07:51.860262 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_bq_sa.equi_v_stg_transaction' (models/stage/equi_v_stg_transaction.sql) depends on a source named 'raw.raw_transactions' which was not found
+[0m14:07:51.862164 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.7683115, "process_in_blocks": "0", "process_kernel_time": 0.964485, "process_mem_max_rss": "312737792", "process_out_blocks": "0", "process_user_time": 3.516051}
+[0m14:07:51.862508 [debug] [MainThread]: Command `dbt run` failed at 14:07:51.862438 after 2.77 seconds
+[0m14:07:51.862773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10419f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042fe350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15f9ef610>]}
+[0m14:07:51.863010 [debug] [MainThread]: Flushing usage events
+[0m14:07:52.770922 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:10:09.641155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cf7670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119344c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111937f10>]}
+
+
+============================== 14:10:09.644437 | 4d59c97c-e077-4225-a65d-6a8890fe6bae ==============================
+[0m14:10:09.644437 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:10:09.644770 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:10:11.533568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10633a050>]}
+[0m14:10:11.565876 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153df01c0>]}
+[0m14:10:11.566269 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m14:10:11.695536 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:10:11.802212 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 0 files added, 1 files changed.
+[0m14:10:11.802558 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory2.sql
+[0m14:10:11.802718 [debug] [MainThread]: Partial parsing: deleted file: dbt_bq_sa://models/stage/v_stg_inventory1.sql
+[0m14:10:11.802944 [debug] [MainThread]: Partial parsing: updated file: dbt_bq_sa://models/raw_vault/hubs/hub_customer.sql
+[0m14:10:11.972163 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 7 unused configuration paths:
+- models.raw_stage
+- models.raw_vault.links
+- models.raw_vault.sats
+- models.raw_vault.t_links
+- models.raw_vault.hubs
+- models.raw_vault
+- models.stage
+[0m14:10:11.982241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1559cd7b0>]}
+[0m14:10:12.040848 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/manifest.json
+[0m14:10:12.043250 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/semantic_manifest.json
+[0m14:10:12.055476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153eed000>]}
+[0m14:10:12.055774 [info ] [MainThread]: Found 31 models, 8 sources, 854 macros
+[0m14:10:12.055957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153eed5d0>]}
+[0m14:10:12.057316 [info ] [MainThread]: 
+[0m14:10:12.057541 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:10:12.057693 [info ] [MainThread]: 
+[0m14:10:12.057998 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:10:12.062187 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_trim-field-467501-p5'
+[0m14:10:12.062485 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:10:12.895140 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_trim-field-467501-p5, now list_trim-field-467501-p5_dbt_dataset)
+[0m14:10:12.896216 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:10:13.828956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153d96a10>]}
+[0m14:10:13.829995 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:10:13.837469 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_orders
+[0m14:10:13.838264 [info ] [Thread-1 (]: 1 of 31 START sql view model dbt_dataset.raw_orders ............................ [RUN]
+[0m14:10:13.838914 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_trim-field-467501-p5_dbt_dataset, now model.dbt_bq_sa.raw_orders)
+[0m14:10:13.839526 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_orders
+[0m14:10:13.855749 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_orders"
+[0m14:10:13.856879 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_orders
+[0m14:10:13.883334 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_orders"
+[0m14:10:13.884170 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_orders: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_orders"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_orders`
+  OPTIONS()
+  as SELECT
+    a.L_ORDERKEY AS ORDERKEY,
+    a.L_PARTKEY AS PARTKEY,
+    a.L_SUPPKEY AS SUPPLIERKEY,
+    a.L_LINENUMBER AS LINENUMBER,
+    a.L_QUANTITY AS QUANTITY,
+    a.L_EXTENDEDPRICE AS EXTENDEDPRICE,
+    a.L_DISCOUNT AS DISCOUNT,
+    a.L_TAX AS TAX,
+    a.L_RETURNFLAG AS RETURNFLAG,
+    a.L_LINESTATUS AS LINESTATUS,
+    a.L_SHIPDATE AS SHIPDATE,
+    a.L_COMMITDATE AS COMMITDATE,
+    a.L_RECEIPTDATE AS RECEIPTDATE,
+    a.L_SHIPINSTRUCT AS SHIPINSTRUCT,
+    a.L_SHIPMODE AS SHIPMODE,
+    a.L_COMMENT AS LINE_COMMENT,
+    b.O_CUSTKEY AS CUSTOMERKEY,
+    b.O_ORDERSTATUS AS ORDERSTATUS,
+    b.O_TOTALPRICE AS TOTALPRICE,
+    b.O_ORDERDATE AS ORDERDATE,
+    b.O_ORDERPRIORITY AS ORDERPRIORITY,
+    b.O_CLERK AS CLERK,
+    b.O_SHIPPRIORITY AS SHIPPRIORITY,
+    b.O_COMMENT AS ORDER_COMMENT,
+    c.C_NAME AS CUSTOMER_NAME,
+    c.C_ADDRESS AS CUSTOMER_ADDRESS,
+    c.C_NATIONKEY AS CUSTOMER_NATION_KEY,
+    c.C_PHONE AS CUSTOMER_PHONE,
+    c.C_ACCTBAL AS CUSTOMER_ACCBAL,
+    c.C_MKTSEGMENT AS CUSTOMER_MKTSEGMENT,
+    c.C_COMMENT AS CUSTOMER_COMMENT,
+    d.N_NAME AS CUSTOMER_NATION_NAME,
+    d.N_REGIONKEY AS CUSTOMER_REGION_KEY,
+    d.N_COMMENT AS CUSTOMER_NATION_COMMENT,
+    e.R_NAME AS CUSTOMER_REGION_NAME,
+    e.R_COMMENT AS CUSTOMER_REGION_COMMENT
+FROM `trim-field-467501-p5`.`dbt_dataset`.`orders` AS b
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`lineitem` AS a
+    ON a.L_ORDERKEY = b.O_ORDERKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`customer` AS c
+    ON b.O_CUSTKEY = c.C_CUSTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS d
+    ON c.C_NATIONKEY = d.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS e
+    ON d.N_REGIONKEY = e.R_REGIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`part` AS g
+    ON a.L_PARTKEY = g.P_PARTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`supplier` AS h
+    ON a.L_SUPPKEY = h.S_SUPPKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS j
+    ON h.S_NATIONKEY = j.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS k
+    ON j.N_REGIONKEY = k.R_REGIONKEY
+WHERE b.O_ORDERDATE = PARSE_DATE('%Y-%m-%d', '1992-01-08');
+
+
+[0m14:10:13.884578 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:15.248133 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:314edebb-6e66-4a87-9405-1974a4f64b37&page=queryresults
+[0m14:10:16.432877 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x154c13df0>]}
+[0m14:10:16.433480 [info ] [Thread-1 (]: 1 of 31 OK created sql view model dbt_dataset.raw_orders ....................... [[32mCREATE VIEW (0 processed)[0m in 2.59s]
+[0m14:10:16.433797 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_orders
+[0m14:10:16.434016 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_transactions
+[0m14:10:16.434361 [info ] [Thread-1 (]: 2 of 31 START sql view model dbt_dataset.raw_transactions ...................... [RUN]
+[0m14:10:16.434589 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_orders, now model.dbt_bq_sa.raw_transactions)
+[0m14:10:16.434775 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_transactions
+[0m14:10:16.436998 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_transactions"
+[0m14:10:16.437359 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_transactions
+[0m14:10:16.439290 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_transactions"
+[0m14:10:16.439912 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_transactions`
+  OPTIONS()
+  as SELECT
+    b.O_ORDERKEY AS ORDER_ID,
+    b.O_CUSTKEY AS CUSTOMER_ID,
+    b.O_ORDERDATE AS ORDER_DATE,
+    DATE_ADD(b.O_ORDERDATE, INTERVAL 20 DAY) AS TRANSACTION_DATE,
+    CAST(RPAD(CONCAT(CAST(b.O_ORDERKEY AS STRING), CAST(b.O_CUSTKEY AS STRING), FORMAT_DATE('%Y%m%d', b.O_ORDERDATE)), 24, '0') AS INT64) AS TRANSACTION_NUMBER,
+    b.O_TOTALPRICE AS AMOUNT,
+    CAST(
+        CASE FLOOR(RAND() * 2) + 1
+            WHEN 1 THEN 'DR'
+            WHEN 2 THEN 'CR'
+        END AS STRING) AS TYPE
+FROM `trim-field-467501-p5`.`dbt_dataset`.`orders` AS b
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`customer` AS c
+    ON b.O_CUSTKEY = c.C_CUSTKEY
+WHERE b.O_ORDERDATE = PARSE_DATE('%Y-%m-%d', '1992-01-08');
+
+
+[0m14:10:16.440157 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:17.428099 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:d31d0f5f-37ff-4383-b2d2-951904a8e025&page=queryresults
+[0m14:10:18.335279 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110115000>]}
+[0m14:10:18.337011 [info ] [Thread-1 (]: 2 of 31 OK created sql view model dbt_dataset.raw_transactions ................. [[32mCREATE VIEW (0 processed)[0m in 1.90s]
+[0m14:10:18.337938 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_transactions
+[0m14:10:18.338604 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.raw_inventory
+[0m14:10:18.339498 [info ] [Thread-1 (]: 3 of 31 START sql view model dbt_dataset.raw_inventory ......................... [RUN]
+[0m14:10:18.340461 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_transactions, now model.dbt_bq_sa.raw_inventory)
+[0m14:10:18.341398 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.raw_inventory
+[0m14:10:18.352463 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.raw_inventory"
+[0m14:10:18.353651 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.raw_inventory
+[0m14:10:18.361368 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.raw_inventory"
+[0m14:10:18.362584 [debug] [Thread-1 (]: On model.dbt_bq_sa.raw_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.raw_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+  OPTIONS()
+  as SELECT
+    a.PS_PARTKEY AS PARTKEY,
+    a.PS_SUPPKEY AS SUPPLIERKEY,
+    a.PS_AVAILQTY AS AVAILQTY,
+    a.PS_SUPPLYCOST AS SUPPLYCOST,
+    a.PS_COMMENT AS PART_SUPPLY_COMMENT,
+    b.S_NAME AS SUPPLIER_NAME,
+    b.S_ADDRESS AS SUPPLIER_ADDRESS,
+    b.S_NATIONKEY AS SUPPLIER_NATION_KEY,
+    b.S_PHONE AS SUPPLIER_PHONE,
+    b.S_ACCTBAL AS SUPPLIER_ACCTBAL,
+    b.S_COMMENT AS SUPPLIER_COMMENT,
+    c.P_NAME AS PART_NAME,
+    c.P_MFGR AS PART_MFGR,
+    c.P_BRAND AS PART_BRAND,
+    c.P_TYPE AS PART_TYPE,
+    c.P_SIZE AS PART_SIZE,
+    c.P_CONTAINER AS PART_CONTAINER,
+    c.P_RETAILPRICE AS PART_RETAILPRICE,
+    c.P_COMMENT AS PART_COMMENT,
+    d.N_NAME AS SUPPLIER_NATION_NAME,
+    d.N_COMMENT AS SUPPLIER_NATION_COMMENT,
+    d.N_REGIONKEY AS SUPPLIER_REGION_KEY,
+    e.R_NAME AS SUPPLIER_REGION_NAME,
+    e.R_COMMENT AS SUPPLIER_REGION_COMMENT
+FROM `trim-field-467501-p5`.`dbt_dataset`.`partsupp` AS a
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`supplier` AS b
+    ON a.PS_SUPPKEY = b.S_SUPPKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`part` AS c
+    ON a.PS_PARTKEY = c.P_PARTKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`nation` AS d
+    ON b.S_NATIONKEY = d.N_NATIONKEY
+LEFT JOIN `trim-field-467501-p5`.`dbt_dataset`.`region` AS e
+    ON d.N_REGIONKEY = e.R_REGIONKEY
+JOIN `trim-field-467501-p5`.`dbt_dataset`.`raw_orders` AS f
+    ON a.PS_PARTKEY = f.PARTKEY AND a.PS_SUPPKEY=f.SUPPLIERKEY
+ORDER BY a.PS_PARTKEY, a.PS_SUPPKEY;
+
+
+[0m14:10:18.363234 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:19.835339 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:aa80c2ac-0ec2-446f-9865-3f5a5191788b&page=queryresults
+[0m14:10:20.673494 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110115000>]}
+[0m14:10:20.675423 [info ] [Thread-1 (]: 3 of 31 OK created sql view model dbt_dataset.raw_inventory .................... [[32mCREATE VIEW (0 processed)[0m in 2.33s]
+[0m14:10:20.676722 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.raw_inventory
+[0m14:10:20.677394 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_orders
+[0m14:10:20.678295 [info ] [Thread-1 (]: 4 of 31 START sql view model dbt_dataset.v_stg_orders .......................... [RUN]
+[0m14:10:20.679322 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.raw_inventory, now model.dbt_bq_sa.v_stg_orders)
+[0m14:10:20.679910 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_orders
+[0m14:10:20.719913 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:22.307881 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_orders"
+[0m14:10:22.309648 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_orders
+[0m14:10:22.312627 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_orders"
+[0m14:10:22.313976 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_orders: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_orders"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_orders`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMERKEY AS CUSTOMER_KEY,
+    CUSTOMER_NATION_KEY AS NATION_KEY,
+    CUSTOMER_REGION_KEY AS REGION_KEY,
+    'TPCH-ORDERS' AS RECORD_SOURCE,
+    ORDERDATE AS EFFECTIVE_FROM
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMER_KEY,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    EFFECTIVE_FROM,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_CUSTOMER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), '')))) AS STRING) AS CUSTOMER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), '')))) AS STRING) AS ORDER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS ORDER_CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINEITEM_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^')
+    ), '^^||^^||^^')))) AS STRING) AS LINK_LINEITEM_ORDER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^||^^')))) AS STRING) AS INVENTORY_ALLOCATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ACCBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_MKTSEGMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_PHONE AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS CUSTOMER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(COMMITDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(DISCOUNT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(EXTENDEDPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINE_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINENUMBER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(LINESTATUS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(QUANTITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(RECEIPTDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(RETURNFLAG AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPINSTRUCT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPMODE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TAX AS STRING))), ''), '^^')
+    )))) AS STRING) AS LINEITEM_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CLERK AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERDATE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERPRIORITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(ORDERSTATUS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SHIPPRIORITY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TOTALPRICE AS STRING))), ''), '^^')
+    )))) AS STRING) AS ORDER_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    ORDERKEY,
+    PARTKEY,
+    SUPPLIERKEY,
+    LINENUMBER,
+    QUANTITY,
+    EXTENDEDPRICE,
+    DISCOUNT,
+    TAX,
+    RETURNFLAG,
+    LINESTATUS,
+    SHIPDATE,
+    COMMITDATE,
+    RECEIPTDATE,
+    SHIPINSTRUCT,
+    SHIPMODE,
+    LINE_COMMENT,
+    CUSTOMERKEY,
+    ORDERSTATUS,
+    TOTALPRICE,
+    ORDERDATE,
+    ORDERPRIORITY,
+    CLERK,
+    SHIPPRIORITY,
+    ORDER_COMMENT,
+    CUSTOMER_NAME,
+    CUSTOMER_ADDRESS,
+    CUSTOMER_NATION_KEY,
+    CUSTOMER_PHONE,
+    CUSTOMER_ACCBAL,
+    CUSTOMER_MKTSEGMENT,
+    CUSTOMER_COMMENT,
+    CUSTOMER_NATION_NAME,
+    CUSTOMER_REGION_KEY,
+    CUSTOMER_NATION_COMMENT,
+    CUSTOMER_REGION_NAME,
+    CUSTOMER_REGION_COMMENT,
+    CUSTOMER_KEY,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    EFFECTIVE_FROM,
+    CUSTOMER_PK,
+    LINK_CUSTOMER_NATION_PK,
+    CUSTOMER_NATION_PK,
+    CUSTOMER_REGION_PK,
+    NATION_PK,
+    REGION_PK,
+    NATION_REGION_PK,
+    ORDER_PK,
+    ORDER_CUSTOMER_PK,
+    LINEITEM_PK,
+    LINK_LINEITEM_ORDER_PK,
+    PART_PK,
+    SUPPLIER_PK,
+    INVENTORY_PK,
+    INVENTORY_ALLOCATION_PK,
+    CUSTOMER_HASHDIFF,
+    CUSTOMER_NATION_HASHDIFF,
+    CUSTOMER_REGION_HASHDIFF,
+    LINEITEM_HASHDIFF,
+    ORDER_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT * ,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE
+FROM staging;
+
+
+[0m14:10:23.344351 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:a8feca10-eec5-473b-abd6-0c8f8d41c658&page=queryresults
+[0m14:10:24.319901 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:24.327437 [info ] [Thread-1 (]: 4 of 31 OK created sql view model dbt_dataset.v_stg_orders ..................... [[32mCREATE VIEW (0 processed)[0m in 3.64s]
+[0m14:10:24.328805 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_orders
+[0m14:10:24.329329 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_transactions
+[0m14:10:24.331111 [info ] [Thread-1 (]: 5 of 31 START sql view model dbt_dataset.v_stg_transactions .................... [RUN]
+[0m14:10:24.333540 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_orders, now model.dbt_bq_sa.v_stg_transactions)
+[0m14:10:24.334430 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_transactions
+[0m14:10:24.351003 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:25.894801 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_transactions"
+[0m14:10:25.898043 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_transactions
+[0m14:10:25.905051 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_transactions"
+[0m14:10:25.906033 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_transactions`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_transactions`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    'RAW_TRANSACTIONS' AS RECORD_SOURCE,
+    DATE_ADD(TRANSACTION_DATE, INTERVAL 1 DAY) AS LOAD_DATE,
+    TRANSACTION_DATE AS EFFECTIVE_FROM
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    RECORD_SOURCE,
+    LOAD_DATE,
+    EFFECTIVE_FROM,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ID AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(TRANSACTION_NUMBER AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS TRANSACTION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(CUSTOMER_ID AS STRING))), '')))) AS STRING) AS CUSTOMER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(ORDER_ID AS STRING))), '')))) AS STRING) AS ORDER_PK
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    ORDER_ID,
+    CUSTOMER_ID,
+    ORDER_DATE,
+    TRANSACTION_DATE,
+    TRANSACTION_NUMBER,
+    AMOUNT,
+    TYPE,
+    RECORD_SOURCE,
+    LOAD_DATE,
+    EFFECTIVE_FROM,
+    TRANSACTION_PK,
+    CUSTOMER_PK,
+    ORDER_PK
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select;
+
+
+[0m14:10:26.614868 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:9036ef0b-3a01-4880-8692-d53e9580ccf3&page=queryresults
+[0m14:10:27.467511 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153f3e4a0>]}
+[0m14:10:27.468353 [info ] [Thread-1 (]: 5 of 31 OK created sql view model dbt_dataset.v_stg_transactions ............... [[32mCREATE VIEW (0 processed)[0m in 3.14s]
+[0m14:10:27.468798 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_transactions
+[0m14:10:27.469101 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.v_stg_inventory
+[0m14:10:27.469424 [info ] [Thread-1 (]: 6 of 31 START sql view model dbt_dataset.v_stg_inventory ....................... [RUN]
+[0m14:10:27.470125 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_transactions, now model.dbt_bq_sa.v_stg_inventory)
+[0m14:10:27.470599 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.v_stg_inventory
+[0m14:10:27.476981 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:28.871953 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.v_stg_inventory"
+[0m14:10:28.884869 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.v_stg_inventory
+[0m14:10:28.921441 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.v_stg_inventory"
+[0m14:10:28.923022 [debug] [Thread-1 (]: On model.dbt_bq_sa.v_stg_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.v_stg_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory`
+  OPTIONS()
+  as 
+
+
+
+
+
+
+
+
+WITH staging AS (
+-- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT
+
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`raw_inventory`
+),
+
+derived_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    SUPPLIER_NATION_KEY AS NATION_KEY,
+    SUPPLIER_REGION_KEY AS REGION_KEY,
+    'TPCH-INVENTORY' AS RECORD_SOURCE
+
+    FROM source_data
+),
+
+hashed_columns AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), '')))) AS STRING) AS SUPPLIER_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS SUPPLIER_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), '')))) AS STRING) AS REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), '')))) AS STRING) AS NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS NATION_REGION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS LINK_SUPPLIER_NATION_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), '')))) AS STRING) AS PART_PK,
+
+    CAST(UPPER(TO_HEX(MD5(NULLIF(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    ), '^^||^^')))) AS STRING) AS INVENTORY_PK,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ACCTBAL AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_ADDRESS AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_PHONE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_BRAND AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_CONTAINER AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_MFGR AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_NAME AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_RETAILPRICE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SIZE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_TYPE AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^')
+    )))) AS STRING) AS PART_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_REGION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_REGION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_KEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIER_NATION_NAME AS STRING))), ''), '^^')
+    )))) AS STRING) AS SUPPLIER_NATION_HASHDIFF,
+
+    CAST(UPPER(TO_HEX(MD5(CONCAT(
+        IFNULL(NULLIF(UPPER(TRIM(CAST(AVAILQTY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PART_SUPPLY_COMMENT AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(PARTKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLIERKEY AS STRING))), ''), '^^'), '||',
+        IFNULL(NULLIF(UPPER(TRIM(CAST(SUPPLYCOST AS STRING))), ''), '^^')
+    )))) AS STRING) AS INVENTORY_HASHDIFF
+
+    FROM derived_columns
+),
+
+columns_to_select AS (
+
+    SELECT
+
+    PARTKEY,
+    SUPPLIERKEY,
+    AVAILQTY,
+    SUPPLYCOST,
+    PART_SUPPLY_COMMENT,
+    SUPPLIER_NAME,
+    SUPPLIER_ADDRESS,
+    SUPPLIER_NATION_KEY,
+    SUPPLIER_PHONE,
+    SUPPLIER_ACCTBAL,
+    SUPPLIER_COMMENT,
+    PART_NAME,
+    PART_MFGR,
+    PART_BRAND,
+    PART_TYPE,
+    PART_SIZE,
+    PART_CONTAINER,
+    PART_RETAILPRICE,
+    PART_COMMENT,
+    SUPPLIER_NATION_NAME,
+    SUPPLIER_NATION_COMMENT,
+    SUPPLIER_REGION_KEY,
+    SUPPLIER_REGION_NAME,
+    SUPPLIER_REGION_COMMENT,
+    NATION_KEY,
+    REGION_KEY,
+    RECORD_SOURCE,
+    SUPPLIER_PK,
+    SUPPLIER_NATION_PK,
+    SUPPLIER_REGION_PK,
+    REGION_PK,
+    NATION_PK,
+    NATION_REGION_PK,
+    LINK_SUPPLIER_NATION_PK,
+    PART_PK,
+    INVENTORY_PK,
+    SUPPLIER_HASHDIFF,
+    PART_HASHDIFF,
+    SUPPLIER_REGION_HASHDIFF,
+    SUPPLIER_NATION_HASHDIFF,
+    INVENTORY_HASHDIFF
+
+    FROM hashed_columns
+)
+
+SELECT * FROM columns_to_select
+)
+
+SELECT *, 
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS LOAD_DATE,
+       PARSE_DATE('%Y-%m-%d', '1992-01-08') AS EFFECTIVE_FROM
+FROM staging;
+
+
+[0m14:10:29.917428 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:1570c1ce-ba6e-44fd-b4e9-4e6449f39c7f&page=queryresults
+[0m14:10:30.966087 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:30.967418 [info ] [Thread-1 (]: 6 of 31 OK created sql view model dbt_dataset.v_stg_inventory .................. [[32mCREATE VIEW (0 processed)[0m in 3.50s]
+[0m14:10:30.968179 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.v_stg_inventory
+[0m14:10:30.968895 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_customer
+[0m14:10:30.971316 [info ] [Thread-1 (]: 7 of 31 START sql incremental model dbt_dataset.hub_customer ................... [RUN]
+[0m14:10:30.972122 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.v_stg_inventory, now model.dbt_bq_sa.hub_customer)
+[0m14:10:30.972914 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_customer
+[0m14:10:31.000251 [info ] [Thread-1 (]: 14:10:30 + Loading trim-field-467501-p5.dbt_dataset.hub_customer from 1 source(s)
+[0m14:10:31.003706 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_customer"
+[0m14:10:31.006041 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_customer
+[0m14:10:31.034583 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:31.864145 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_customer"
+[0m14:10:31.866623 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_customer: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_customer"} */
+
+  
+    
+
+    create or replace table `trim-field-467501-p5`.`dbt_dataset`.`hub_customer`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.CUSTOMER_PK, rr.CUSTOMERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.CUSTOMER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.CUSTOMER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert
+    );
+  
+[0m14:10:32.854983 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:50fca26e-9dca-404c-bf2b-b4b379c25f4a&page=queryresults
+[0m14:10:38.899996 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1559b4fd0>]}
+[0m14:10:38.902268 [info ] [Thread-1 (]: 7 of 31 OK created sql incremental model dbt_dataset.hub_customer .............. [[32mCREATE TABLE (0.0 rows, 224.0 Bytes processed)[0m in 7.93s]
+[0m14:10:38.902927 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_customer
+[0m14:10:38.904078 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_lineitem
+[0m14:10:38.906569 [info ] [Thread-1 (]: 8 of 31 START sql view model dbt_dataset.hub_lineitem .......................... [RUN]
+[0m14:10:38.909203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_customer, now model.dbt_bq_sa.hub_lineitem)
+[0m14:10:38.909995 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_lineitem
+[0m14:10:38.924206 [info ] [Thread-1 (]: 14:10:38 + Loading trim-field-467501-p5.dbt_dataset.hub_lineitem from 1 source(s)
+[0m14:10:38.928067 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_lineitem"
+[0m14:10:38.928854 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_lineitem
+[0m14:10:38.935101 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_lineitem"
+[0m14:10:38.936013 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_lineitem: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_lineitem"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_lineitem`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINEITEM_PK, rr.LINENUMBER, rr.ORDERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINEITEM_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.LINEITEM_PK, a.LINENUMBER, a.ORDERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:38.936385 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:40.132563 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:a661997a-e083-4382-a714-bf6566b7d872&page=queryresults
+[0m14:10:41.049961 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:41.051573 [info ] [Thread-1 (]: 8 of 31 OK created sql view model dbt_dataset.hub_lineitem ..................... [[32mCREATE VIEW (0 processed)[0m in 2.14s]
+[0m14:10:41.052295 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_lineitem
+[0m14:10:41.053887 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_order
+[0m14:10:41.055312 [info ] [Thread-1 (]: 9 of 31 START sql view model dbt_dataset.hub_order ............................. [RUN]
+[0m14:10:41.056062 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_lineitem, now model.dbt_bq_sa.hub_order)
+[0m14:10:41.056597 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_order
+[0m14:10:41.062741 [info ] [Thread-1 (]: 14:10:41 + Loading trim-field-467501-p5.dbt_dataset.hub_order from 1 source(s)
+[0m14:10:41.065887 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_order"
+[0m14:10:41.067810 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_order
+[0m14:10:41.072780 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_order"
+[0m14:10:41.073851 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_order: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_order"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_order`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.ORDER_PK, rr.ORDERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.ORDER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.ORDER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.ORDER_PK, a.ORDERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:41.074400 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:42.198306 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:89e97041-3a43-468a-b733-8fa5cd83ac60&page=queryresults
+[0m14:10:42.998051 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:42.999527 [info ] [Thread-1 (]: 9 of 31 OK created sql view model dbt_dataset.hub_order ........................ [[32mCREATE VIEW (0 processed)[0m in 1.94s]
+[0m14:10:43.000425 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_order
+[0m14:10:43.001109 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_customer_nation
+[0m14:10:43.003988 [info ] [Thread-1 (]: 10 of 31 START sql view model dbt_dataset.link_customer_nation ................. [RUN]
+[0m14:10:43.004733 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_order, now model.dbt_bq_sa.link_customer_nation)
+[0m14:10:43.005483 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_customer_nation
+[0m14:10:43.032495 [info ] [Thread-1 (]: 14:10:43 + Loading trim-field-467501-p5.dbt_dataset.link_customer_nation from 1 source(s)
+[0m14:10:43.059005 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_customer_nation"
+[0m14:10:43.059859 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_customer_nation
+[0m14:10:43.070217 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_customer_nation"
+[0m14:10:43.071559 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_customer_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_customer_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_customer_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_CUSTOMER_NATION_PK, rr.CUSTOMER_PK, rr.NATION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_CUSTOMER_NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINK_CUSTOMER_NATION_PK IS NOT NULL
+    AND rr.CUSTOMER_PK IS NOT NULL
+    AND rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_CUSTOMER_NATION_PK, a.CUSTOMER_PK, a.NATION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:43.071940 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:44.260336 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:d3e9c9f2-eaf6-4ffa-a8a0-90b1b3185d7b&page=queryresults
+[0m14:10:45.151567 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155f4f8e0>]}
+[0m14:10:45.153010 [info ] [Thread-1 (]: 10 of 31 OK created sql view model dbt_dataset.link_customer_nation ............ [[32mCREATE VIEW (0 processed)[0m in 2.15s]
+[0m14:10:45.153555 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_customer_nation
+[0m14:10:45.153876 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_customer_order
+[0m14:10:45.154654 [info ] [Thread-1 (]: 11 of 31 START sql view model dbt_dataset.link_customer_order .................. [RUN]
+[0m14:10:45.155371 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_customer_nation, now model.dbt_bq_sa.link_customer_order)
+[0m14:10:45.155690 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_customer_order
+[0m14:10:45.160849 [info ] [Thread-1 (]: 14:10:45 + Loading trim-field-467501-p5.dbt_dataset.link_customer_order from 1 source(s)
+[0m14:10:45.164762 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_customer_order"
+[0m14:10:45.165499 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_customer_order
+[0m14:10:45.168465 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_customer_order"
+[0m14:10:45.169168 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_customer_order: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_customer_order"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_customer_order`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.ORDER_CUSTOMER_PK, rr.CUSTOMER_PK, rr.ORDER_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.ORDER_CUSTOMER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.ORDER_CUSTOMER_PK IS NOT NULL
+    AND rr.CUSTOMER_PK IS NOT NULL
+    AND rr.ORDER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.ORDER_CUSTOMER_PK, a.CUSTOMER_PK, a.ORDER_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:45.169481 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:46.383055 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:f1aef74c-b437-4eca-861f-aca441ba694e&page=queryresults
+[0m14:10:47.230282 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:47.231237 [info ] [Thread-1 (]: 11 of 31 OK created sql view model dbt_dataset.link_customer_order ............. [[32mCREATE VIEW (0 processed)[0m in 2.07s]
+[0m14:10:47.231696 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_customer_order
+[0m14:10:47.232074 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_inventory_allocation
+[0m14:10:47.232690 [info ] [Thread-1 (]: 12 of 31 START sql view model dbt_dataset.link_inventory_allocation ............ [RUN]
+[0m14:10:47.233169 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_customer_order, now model.dbt_bq_sa.link_inventory_allocation)
+[0m14:10:47.233581 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_inventory_allocation
+[0m14:10:47.245861 [info ] [Thread-1 (]: 14:10:47 + Loading trim-field-467501-p5.dbt_dataset.link_inventory_allocation from 1 source(s)
+[0m14:10:47.251379 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_inventory_allocation"
+[0m14:10:47.252571 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_inventory_allocation
+[0m14:10:47.256173 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_inventory_allocation"
+[0m14:10:47.257300 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_inventory_allocation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_inventory_allocation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_inventory_allocation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.INVENTORY_ALLOCATION_PK, rr.PART_PK, rr.SUPPLIER_PK, rr.LINEITEM_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.INVENTORY_ALLOCATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.INVENTORY_ALLOCATION_PK IS NOT NULL
+    AND rr.PART_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.INVENTORY_ALLOCATION_PK, a.PART_PK, a.SUPPLIER_PK, a.LINEITEM_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:47.257996 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:48.336406 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:c2a8293d-6398-40fb-93fb-56523ca3cfc6&page=queryresults
+[0m14:10:49.236150 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:49.237237 [info ] [Thread-1 (]: 12 of 31 OK created sql view model dbt_dataset.link_inventory_allocation ....... [[32mCREATE VIEW (0 processed)[0m in 2.00s]
+[0m14:10:49.237772 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_inventory_allocation
+[0m14:10:49.238097 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_order_lineitem
+[0m14:10:49.238417 [info ] [Thread-1 (]: 13 of 31 START sql view model dbt_dataset.link_order_lineitem .................. [RUN]
+[0m14:10:49.238755 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_inventory_allocation, now model.dbt_bq_sa.link_order_lineitem)
+[0m14:10:49.239090 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_order_lineitem
+[0m14:10:49.243196 [info ] [Thread-1 (]: 14:10:49 + Loading trim-field-467501-p5.dbt_dataset.link_order_lineitem from 1 source(s)
+[0m14:10:49.245782 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_order_lineitem"
+[0m14:10:49.247630 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_order_lineitem
+[0m14:10:49.252121 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_order_lineitem"
+[0m14:10:49.252858 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_order_lineitem: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_order_lineitem"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_order_lineitem`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_LINEITEM_ORDER_PK, rr.ORDER_PK, rr.LINEITEM_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_LINEITEM_ORDER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.LINK_LINEITEM_ORDER_PK IS NOT NULL
+    AND rr.ORDER_PK IS NOT NULL
+    AND rr.LINEITEM_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_LINEITEM_ORDER_PK, a.ORDER_PK, a.LINEITEM_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:49.254024 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:50.423704 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:2be49f0f-dedc-48a4-b69a-c6f4a301f9dd&page=queryresults
+[0m14:10:51.282750 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155f355d0>]}
+[0m14:10:51.283830 [info ] [Thread-1 (]: 13 of 31 OK created sql view model dbt_dataset.link_order_lineitem ............. [[32mCREATE VIEW (0 processed)[0m in 2.04s]
+[0m14:10:51.284345 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_order_lineitem
+[0m14:10:51.284744 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m14:10:51.285509 [info ] [Thread-1 (]: 14 of 31 START sql view model dbt_dataset.sat_order_cust_nation_details ........ [RUN]
+[0m14:10:51.286047 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_order_lineitem, now model.dbt_bq_sa.sat_order_cust_nation_details)
+[0m14:10:51.286387 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m14:10:51.329313 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_cust_nation_details"
+[0m14:10:51.330183 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m14:10:51.332822 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_cust_nation_details"
+[0m14:10:51.333335 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_cust_nation_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_cust_nation_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_cust_nation_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_NATION_HASHDIFF, a.CUSTOMER_NATION_NAME, a.CUSTOMER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_NATION_HASHDIFF, stage.CUSTOMER_NATION_NAME, stage.CUSTOMER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:51.333793 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:52.822757 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:40efbf2d-1809-4aa4-8ffb-db62ab8df793&page=queryresults
+[0m14:10:53.622082 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:53.623353 [info ] [Thread-1 (]: 14 of 31 OK created sql view model dbt_dataset.sat_order_cust_nation_details ... [[32mCREATE VIEW (0 processed)[0m in 2.34s]
+[0m14:10:53.624171 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_cust_nation_details
+[0m14:10:53.624539 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_cust_region_details
+[0m14:10:53.625032 [info ] [Thread-1 (]: 15 of 31 START sql view model dbt_dataset.sat_order_cust_region_details ........ [RUN]
+[0m14:10:53.625433 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_cust_nation_details, now model.dbt_bq_sa.sat_order_cust_region_details)
+[0m14:10:53.625711 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_cust_region_details
+[0m14:10:53.634206 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_cust_region_details"
+[0m14:10:53.635141 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_cust_region_details
+[0m14:10:53.640900 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_cust_region_details"
+[0m14:10:53.642591 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_cust_region_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_cust_region_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_cust_region_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_REGION_HASHDIFF, a.CUSTOMER_REGION_NAME, a.CUSTOMER_REGION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_REGION_HASHDIFF, stage.CUSTOMER_REGION_NAME, stage.CUSTOMER_REGION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:53.643018 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:54.741848 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:5d509d1b-6eb3-48e6-86d4-11f155f6713a&page=queryresults
+[0m14:10:55.594266 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155f3d810>]}
+[0m14:10:55.595571 [info ] [Thread-1 (]: 15 of 31 OK created sql view model dbt_dataset.sat_order_cust_region_details ... [[32mCREATE VIEW (0 processed)[0m in 1.97s]
+[0m14:10:55.597162 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_cust_region_details
+[0m14:10:55.599008 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_customer_details
+[0m14:10:55.600074 [info ] [Thread-1 (]: 16 of 31 START sql view model dbt_dataset.sat_order_customer_details ........... [RUN]
+[0m14:10:55.600673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_cust_region_details, now model.dbt_bq_sa.sat_order_customer_details)
+[0m14:10:55.601050 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_customer_details
+[0m14:10:55.615034 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_customer_details"
+[0m14:10:55.616668 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_customer_details
+[0m14:10:55.620728 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_customer_details"
+[0m14:10:55.621621 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_customer_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_customer_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_customer_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.CUSTOMER_PK, a.CUSTOMER_HASHDIFF, a.CUSTOMER_NAME, a.CUSTOMER_ADDRESS, a.CUSTOMER_PHONE, a.CUSTOMER_ACCBAL, a.CUSTOMER_MKTSEGMENT, a.CUSTOMER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.CUSTOMER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.CUSTOMER_PK, stage.CUSTOMER_HASHDIFF, stage.CUSTOMER_NAME, stage.CUSTOMER_ADDRESS, stage.CUSTOMER_PHONE, stage.CUSTOMER_ACCBAL, stage.CUSTOMER_MKTSEGMENT, stage.CUSTOMER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:55.622049 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:56.694838 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:4a929187-6438-4904-8153-bed15529e588&page=queryresults
+[0m14:10:57.548522 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155f3c070>]}
+[0m14:10:57.555429 [info ] [Thread-1 (]: 16 of 31 OK created sql view model dbt_dataset.sat_order_customer_details ...... [[32mCREATE VIEW (0 processed)[0m in 1.95s]
+[0m14:10:57.556435 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_customer_details
+[0m14:10:57.557011 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_lineitem_details
+[0m14:10:57.557876 [info ] [Thread-1 (]: 17 of 31 START sql view model dbt_dataset.sat_order_lineitem_details ........... [RUN]
+[0m14:10:57.558416 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_customer_details, now model.dbt_bq_sa.sat_order_lineitem_details)
+[0m14:10:57.558792 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_lineitem_details
+[0m14:10:57.584014 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_lineitem_details"
+[0m14:10:57.585313 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_lineitem_details
+[0m14:10:57.589518 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_lineitem_details"
+[0m14:10:57.590403 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_lineitem_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_lineitem_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_lineitem_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.LINEITEM_PK, a.LINEITEM_HASHDIFF, a.COMMITDATE, a.DISCOUNT, a.EXTENDEDPRICE, a.LINE_COMMENT, a.QUANTITY, a.RECEIPTDATE, a.RETURNFLAG, a.SHIPDATE, a.SHIPINSTRUCT, a.SHIPMODE, a.TAX, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.LINEITEM_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.LINEITEM_PK, stage.LINEITEM_HASHDIFF, stage.COMMITDATE, stage.DISCOUNT, stage.EXTENDEDPRICE, stage.LINE_COMMENT, stage.QUANTITY, stage.RECEIPTDATE, stage.RETURNFLAG, stage.SHIPDATE, stage.SHIPINSTRUCT, stage.SHIPMODE, stage.TAX, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:57.590807 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:10:58.740913 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:3719a9ec-14cb-4143-bd8f-e7cce2189cfc&page=queryresults
+[0m14:10:59.928684 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:10:59.930221 [info ] [Thread-1 (]: 17 of 31 OK created sql view model dbt_dataset.sat_order_lineitem_details ...... [[32mCREATE VIEW (0 processed)[0m in 2.37s]
+[0m14:10:59.936141 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_lineitem_details
+[0m14:10:59.937358 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_order_order_details
+[0m14:10:59.938281 [info ] [Thread-1 (]: 18 of 31 START sql view model dbt_dataset.sat_order_order_details .............. [RUN]
+[0m14:10:59.939203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_lineitem_details, now model.dbt_bq_sa.sat_order_order_details)
+[0m14:10:59.939820 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_order_order_details
+[0m14:10:59.950852 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_order_order_details"
+[0m14:10:59.951655 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_order_order_details
+[0m14:10:59.954170 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_order_order_details"
+[0m14:10:59.954928 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_order_order_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_order_order_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_order_order_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.ORDER_PK, a.ORDER_HASHDIFF, a.ORDERSTATUS, a.TOTALPRICE, a.ORDERDATE, a.ORDERPRIORITY, a.CLERK, a.SHIPPRIORITY, a.ORDER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS a
+    WHERE a.ORDER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.ORDER_PK, stage.ORDER_HASHDIFF, stage.ORDERSTATUS, stage.TOTALPRICE, stage.ORDERDATE, stage.ORDERPRIORITY, stage.CLERK, stage.SHIPPRIORITY, stage.ORDER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:10:59.955221 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:01.044132 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:46b6b12a-12c8-4d81-907a-7ce274c4b9ac&page=queryresults
+[0m14:11:01.875095 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155fa4dc0>]}
+[0m14:11:01.876910 [info ] [Thread-1 (]: 18 of 31 OK created sql view model dbt_dataset.sat_order_order_details ......... [[32mCREATE VIEW (0 processed)[0m in 1.93s]
+[0m14:11:01.877387 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_order_order_details
+[0m14:11:01.877752 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.t_link_transactions
+[0m14:11:01.878334 [info ] [Thread-1 (]: 19 of 31 START sql view model dbt_dataset.t_link_transactions .................. [RUN]
+[0m14:11:01.878847 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_order_order_details, now model.dbt_bq_sa.t_link_transactions)
+[0m14:11:01.879173 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.t_link_transactions
+[0m14:11:01.907866 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.t_link_transactions"
+[0m14:11:01.908855 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.t_link_transactions
+[0m14:11:01.911589 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.t_link_transactions"
+[0m14:11:01.912074 [debug] [Thread-1 (]: On model.dbt_bq_sa.t_link_transactions: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.t_link_transactions"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`t_link_transactions`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH stage AS (
+    SELECT TRANSACTION_PK, CUSTOMER_PK, ORDER_PK, TRANSACTION_NUMBER, TRANSACTION_DATE, TYPE, AMOUNT, EFFECTIVE_FROM, LOAD_DATE, RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_transactions`
+    WHERE TRANSACTION_PK IS NOT NULL
+    AND CUSTOMER_PK IS NOT NULL
+    AND ORDER_PK IS NOT NULL
+),
+records_to_insert AS (
+    SELECT DISTINCT stg.TRANSACTION_PK, stg.CUSTOMER_PK, stg.ORDER_PK, stg.TRANSACTION_NUMBER, stg.TRANSACTION_DATE, stg.TYPE, stg.AMOUNT, stg.EFFECTIVE_FROM, stg.LOAD_DATE, stg.RECORD_SOURCE
+    FROM stage AS stg
+    
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:01.912353 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:03.034865 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:606cf555-d693-4963-909e-39b166944b08&page=queryresults
+[0m14:11:03.844173 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:11:03.845453 [info ] [Thread-1 (]: 19 of 31 OK created sql view model dbt_dataset.t_link_transactions ............. [[32mCREATE VIEW (0 processed)[0m in 1.96s]
+[0m14:11:03.845942 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.t_link_transactions
+[0m14:11:03.846412 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_nation
+[0m14:11:03.847134 [info ] [Thread-1 (]: 20 of 31 START sql view model dbt_dataset.hub_nation ........................... [RUN]
+[0m14:11:03.847600 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.t_link_transactions, now model.dbt_bq_sa.hub_nation)
+[0m14:11:03.847897 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_nation
+[0m14:11:03.862238 [info ] [Thread-1 (]: 14:11:03 + Loading trim-field-467501-p5.dbt_dataset.hub_nation from 2 source(s)
+[0m14:11:03.867341 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_nation"
+[0m14:11:03.868163 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_nation
+[0m14:11:03.875355 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_nation"
+[0m14:11:03.876193 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.NATION_PK, rr.NATION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.NATION_PK, rr.NATION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.NATION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.NATION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.NATION_PK, a.NATION_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:03.876616 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:04.988502 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:f853c7cc-2432-42f0-ad0d-cfae1f060f50&page=queryresults
+[0m14:11:05.821094 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1100f3160>]}
+[0m14:11:05.822335 [info ] [Thread-1 (]: 20 of 31 OK created sql view model dbt_dataset.hub_nation ...................... [[32mCREATE VIEW (0 processed)[0m in 1.97s]
+[0m14:11:05.823174 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_nation
+[0m14:11:05.823881 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_part
+[0m14:11:05.824676 [info ] [Thread-1 (]: 21 of 31 START sql view model dbt_dataset.hub_part ............................. [RUN]
+[0m14:11:05.825191 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_nation, now model.dbt_bq_sa.hub_part)
+[0m14:11:05.825575 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_part
+[0m14:11:05.830422 [info ] [Thread-1 (]: 14:11:05 + Loading trim-field-467501-p5.dbt_dataset.hub_part from 2 source(s)
+[0m14:11:05.842173 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_part"
+[0m14:11:05.842777 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_part
+[0m14:11:05.845497 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_part"
+[0m14:11:05.846015 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_part: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_part"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_part`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.PART_PK, rr.PARTKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.PART_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.PART_PK, rr.PARTKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.PART_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.PART_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.PART_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.PART_PK, a.PARTKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:05.846343 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:06.988895 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:197cf831-f459-4457-963e-2f582b356313&page=queryresults
+[0m14:11:07.832614 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155e83760>]}
+[0m14:11:07.834121 [info ] [Thread-1 (]: 21 of 31 OK created sql view model dbt_dataset.hub_part ........................ [[32mCREATE VIEW (0 processed)[0m in 2.01s]
+[0m14:11:07.835296 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_part
+[0m14:11:07.835935 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_region
+[0m14:11:07.836429 [info ] [Thread-1 (]: 22 of 31 START sql view model dbt_dataset.hub_region ........................... [RUN]
+[0m14:11:07.836830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_part, now model.dbt_bq_sa.hub_region)
+[0m14:11:07.837085 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_region
+[0m14:11:07.841410 [info ] [Thread-1 (]: 14:11:07 + Loading trim-field-467501-p5.dbt_dataset.hub_region from 2 source(s)
+[0m14:11:07.844557 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_region"
+[0m14:11:07.845808 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_region
+[0m14:11:07.848621 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_region"
+[0m14:11:07.849460 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_region: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_region"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_region`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.REGION_PK, rr.REGION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.REGION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.REGION_PK, rr.REGION_KEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.REGION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.REGION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.REGION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.REGION_PK, a.REGION_KEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:07.849806 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:08.995697 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:30b7a3bf-7916-4e1a-b291-d4b18f66beaa&page=queryresults
+[0m14:11:09.895284 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155e86f20>]}
+[0m14:11:09.897424 [info ] [Thread-1 (]: 22 of 31 OK created sql view model dbt_dataset.hub_region ...................... [[32mCREATE VIEW (0 processed)[0m in 2.06s]
+[0m14:11:09.898256 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_region
+[0m14:11:09.898662 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.hub_supplier
+[0m14:11:09.899211 [info ] [Thread-1 (]: 23 of 31 START sql view model dbt_dataset.hub_supplier ......................... [RUN]
+[0m14:11:09.899768 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_region, now model.dbt_bq_sa.hub_supplier)
+[0m14:11:09.900143 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.hub_supplier
+[0m14:11:09.906000 [info ] [Thread-1 (]: 14:11:09 + Loading trim-field-467501-p5.dbt_dataset.hub_supplier from 2 source(s)
+[0m14:11:09.911476 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.hub_supplier"
+[0m14:11:09.912325 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.hub_supplier
+[0m14:11:09.916009 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.hub_supplier"
+[0m14:11:09.916918 [debug] [Thread-1 (]: On model.dbt_bq_sa.hub_supplier: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.hub_supplier"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`hub_supplier`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.SUPPLIER_PK, rr.SUPPLIERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.SUPPLIER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    WHERE rr.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.SUPPLIER_PK, rr.SUPPLIERKEY, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.SUPPLIER_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+    row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.SUPPLIER_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.SUPPLIER_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+
+records_to_insert AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIERKEY, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:09.917467 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:10.980560 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:9c47ae3f-6e81-49de-b792-0433716fe291&page=queryresults
+[0m14:11:11.767366 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155eabf40>]}
+[0m14:11:13.079349 [debug] [Thread-1 (]: An error was encountered while trying to send an event
+[0m14:11:13.087945 [info ] [Thread-1 (]: 23 of 31 OK created sql view model dbt_dataset.hub_supplier .................... [[32mCREATE VIEW (0 processed)[0m in 1.87s]
+[0m14:11:13.090343 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.hub_supplier
+[0m14:11:13.091918 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_inventory
+[0m14:11:13.093151 [info ] [Thread-1 (]: 24 of 31 START sql view model dbt_dataset.link_inventory ....................... [RUN]
+[0m14:11:13.094579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.hub_supplier, now model.dbt_bq_sa.link_inventory)
+[0m14:11:13.096786 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_inventory
+[0m14:11:13.128658 [info ] [Thread-1 (]: 14:11:13 + Loading trim-field-467501-p5.dbt_dataset.link_inventory from 1 source(s)
+[0m14:11:13.139153 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_inventory"
+[0m14:11:13.141408 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_inventory
+[0m14:11:13.150835 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_inventory"
+[0m14:11:13.151540 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_inventory: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_inventory"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_inventory`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.INVENTORY_PK, rr.SUPPLIER_PK, rr.PART_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.INVENTORY_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.INVENTORY_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.PART_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.INVENTORY_PK, a.SUPPLIER_PK, a.PART_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:13.151895 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:14.337246 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:b0a4c65d-48b5-4d12-a09f-d25fb29759d7&page=queryresults
+[0m14:11:15.128998 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155eabf40>]}
+[0m14:11:15.130106 [info ] [Thread-1 (]: 24 of 31 OK created sql view model dbt_dataset.link_inventory .................. [[32mCREATE VIEW (0 processed)[0m in 2.03s]
+[0m14:11:15.130536 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_inventory
+[0m14:11:15.130871 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_nation_region
+[0m14:11:15.131566 [info ] [Thread-1 (]: 25 of 31 START sql view model dbt_dataset.link_nation_region ................... [RUN]
+[0m14:11:15.131946 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_inventory, now model.dbt_bq_sa.link_nation_region)
+[0m14:11:15.132194 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_nation_region
+[0m14:11:15.138515 [info ] [Thread-1 (]: 14:11:15 + Loading trim-field-467501-p5.dbt_dataset.link_nation_region from 2 source(s)
+[0m14:11:15.142409 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_nation_region"
+[0m14:11:15.143040 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_nation_region
+[0m14:11:15.146373 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_nation_region"
+[0m14:11:15.147210 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_nation_region: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_nation_region"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_nation_region`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.NATION_REGION_PK, rr.NATION_PK, rr.REGION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_orders` AS rr
+    QUALIFY row_number = 1
+),
+
+row_rank_2 AS (
+    SELECT rr.NATION_REGION_PK, rr.NATION_PK, rr.REGION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.NATION_REGION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    QUALIFY row_number = 1
+),
+
+stage_union AS (
+    SELECT * FROM row_rank_1
+    UNION ALL
+    SELECT * FROM row_rank_2
+),
+
+row_rank_union AS (
+    SELECT ru.*,
+           ROW_NUMBER() OVER(
+               PARTITION BY ru.NATION_REGION_PK
+               ORDER BY ru.LOAD_DATE, ru.RECORD_SOURCE ASC
+           ) AS row_rank_number
+    FROM stage_union AS ru
+    WHERE ru.NATION_REGION_PK IS NOT NULL
+    AND ru.NATION_PK IS NOT NULL
+    AND ru.REGION_PK IS NOT NULL
+    QUALIFY row_rank_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.NATION_REGION_PK, a.NATION_PK, a.REGION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_union AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:15.147907 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:16.212237 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:dbd5b8fa-47d6-4cc4-99a9-d53bfee1dbb6&page=queryresults
+[0m14:11:17.089407 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x156163f40>]}
+[0m14:11:17.089990 [info ] [Thread-1 (]: 25 of 31 OK created sql view model dbt_dataset.link_nation_region .............. [[32mCREATE VIEW (0 processed)[0m in 1.96s]
+[0m14:11:17.090395 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_nation_region
+[0m14:11:17.090668 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.link_supplier_nation
+[0m14:11:17.090976 [info ] [Thread-1 (]: 26 of 31 START sql view model dbt_dataset.link_supplier_nation ................. [RUN]
+[0m14:11:17.091264 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_nation_region, now model.dbt_bq_sa.link_supplier_nation)
+[0m14:11:17.091689 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.link_supplier_nation
+[0m14:11:17.099532 [info ] [Thread-1 (]: 14:11:17 + Loading trim-field-467501-p5.dbt_dataset.link_supplier_nation from 1 source(s)
+[0m14:11:17.102484 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.link_supplier_nation"
+[0m14:11:17.103070 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.link_supplier_nation
+[0m14:11:17.105907 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.link_supplier_nation"
+[0m14:11:17.106477 [debug] [Thread-1 (]: On model.dbt_bq_sa.link_supplier_nation: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.link_supplier_nation"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`link_supplier_nation`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH row_rank_1 AS (
+    SELECT rr.LINK_SUPPLIER_NATION_PK, rr.SUPPLIER_PK, rr.NATION_PK, rr.LOAD_DATE, rr.RECORD_SOURCE,
+           ROW_NUMBER() OVER(
+               PARTITION BY rr.LINK_SUPPLIER_NATION_PK
+               ORDER BY rr.LOAD_DATE
+           ) AS row_number
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS rr
+    WHERE rr.LINK_SUPPLIER_NATION_PK IS NOT NULL
+    AND rr.SUPPLIER_PK IS NOT NULL
+    AND rr.NATION_PK IS NOT NULL
+    QUALIFY row_number = 1
+),
+
+records_to_insert AS (
+    SELECT a.LINK_SUPPLIER_NATION_PK, a.SUPPLIER_PK, a.NATION_PK, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM row_rank_1 AS a
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:17.106752 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:18.222855 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:4aa358e0-bce9-4f19-950e-b0982e365b3e&page=queryresults
+[0m14:11:19.145021 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155eb3730>]}
+[0m14:11:19.146476 [info ] [Thread-1 (]: 26 of 31 OK created sql view model dbt_dataset.link_supplier_nation ............ [[32mCREATE VIEW (0 processed)[0m in 2.05s]
+[0m14:11:19.147861 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.link_supplier_nation
+[0m14:11:19.148323 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_inventory_details
+[0m14:11:19.148815 [info ] [Thread-1 (]: 27 of 31 START sql view model dbt_dataset.sat_inv_inventory_details ............ [RUN]
+[0m14:11:19.149198 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.link_supplier_nation, now model.dbt_bq_sa.sat_inv_inventory_details)
+[0m14:11:19.149451 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_inventory_details
+[0m14:11:19.158497 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_inventory_details"
+[0m14:11:19.159194 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_inventory_details
+[0m14:11:19.162850 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_inventory_details"
+[0m14:11:19.163608 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_inventory_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_inventory_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_inventory_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.INVENTORY_PK, a.INVENTORY_HASHDIFF, a.AVAILQTY, a.SUPPLYCOST, a.PART_SUPPLY_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.INVENTORY_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.INVENTORY_PK, stage.INVENTORY_HASHDIFF, stage.AVAILQTY, stage.SUPPLYCOST, stage.PART_SUPPLY_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:19.163915 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:20.196776 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:33d93cbf-00b0-4d3a-add5-3c7911fafeb7&page=queryresults
+[0m14:11:21.189794 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x156163f40>]}
+[0m14:11:21.191155 [info ] [Thread-1 (]: 27 of 31 OK created sql view model dbt_dataset.sat_inv_inventory_details ....... [[32mCREATE VIEW (0 processed)[0m in 2.04s]
+[0m14:11:21.191691 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_inventory_details
+[0m14:11:21.191996 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_part_details
+[0m14:11:21.192952 [info ] [Thread-1 (]: 28 of 31 START sql view model dbt_dataset.sat_inv_part_details ................. [RUN]
+[0m14:11:21.193621 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_inventory_details, now model.dbt_bq_sa.sat_inv_part_details)
+[0m14:11:21.193946 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_part_details
+[0m14:11:21.206629 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_part_details"
+[0m14:11:21.207955 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_part_details
+[0m14:11:21.214835 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_part_details"
+[0m14:11:21.215473 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_part_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_part_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_part_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.PART_PK, a.PART_HASHDIFF, a.PART_NAME, a.PART_MFGR, a.PART_BRAND, a.PART_TYPE, a.PART_SIZE, a.PART_CONTAINER, a.PART_RETAILPRICE, a.PART_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.PART_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.PART_PK, stage.PART_HASHDIFF, stage.PART_NAME, stage.PART_MFGR, stage.PART_BRAND, stage.PART_TYPE, stage.PART_SIZE, stage.PART_CONTAINER, stage.PART_RETAILPRICE, stage.PART_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:21.215747 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:22.324159 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:6ca019ae-5945-41c4-a82f-0ea4b94ab27b&page=queryresults
+[0m14:11:23.096115 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1561b04f0>]}
+[0m14:11:23.097897 [info ] [Thread-1 (]: 28 of 31 OK created sql view model dbt_dataset.sat_inv_part_details ............ [[32mCREATE VIEW (0 processed)[0m in 1.90s]
+[0m14:11:23.098802 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_part_details
+[0m14:11:23.099483 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m14:11:23.100268 [info ] [Thread-1 (]: 29 of 31 START sql view model dbt_dataset.sat_inv_supp_nation_details .......... [RUN]
+[0m14:11:23.100787 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_part_details, now model.dbt_bq_sa.sat_inv_supp_nation_details)
+[0m14:11:23.101088 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m14:11:23.110068 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supp_nation_details"
+[0m14:11:23.111818 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m14:11:23.114553 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supp_nation_details"
+[0m14:11:23.115078 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supp_nation_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supp_nation_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supp_nation_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_NATION_HASHDIFF, a.SUPPLIER_NATION_NAME, a.SUPPLIER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_NATION_HASHDIFF, stage.SUPPLIER_NATION_NAME, stage.SUPPLIER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:23.115383 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:24.313799 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:f0840e19-1be5-4fad-b834-15070ff3f443&page=queryresults
+[0m14:11:25.484356 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15619a920>]}
+[0m14:11:25.486219 [info ] [Thread-1 (]: 29 of 31 OK created sql view model dbt_dataset.sat_inv_supp_nation_details ..... [[32mCREATE VIEW (0 processed)[0m in 2.38s]
+[0m14:11:25.487336 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supp_nation_details
+[0m14:11:25.488562 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m14:11:25.490151 [info ] [Thread-1 (]: 30 of 31 START sql view model dbt_dataset.sat_inv_supp_region_details .......... [RUN]
+[0m14:11:25.491187 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_supp_nation_details, now model.dbt_bq_sa.sat_inv_supp_region_details)
+[0m14:11:25.492033 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m14:11:25.504111 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supp_region_details"
+[0m14:11:25.505256 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m14:11:25.507828 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supp_region_details"
+[0m14:11:25.508825 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supp_region_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supp_region_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supp_region_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_NATION_HASHDIFF, a.SUPPLIER_NATION_NAME, a.SUPPLIER_NATION_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_NATION_HASHDIFF, stage.SUPPLIER_NATION_NAME, stage.SUPPLIER_NATION_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:25.509115 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:26.772255 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:2c32a91a-971a-4624-a50b-c37f8fcd7060&page=queryresults
+[0m14:11:27.691986 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x155ecd7b0>]}
+[0m14:11:27.694521 [info ] [Thread-1 (]: 30 of 31 OK created sql view model dbt_dataset.sat_inv_supp_region_details ..... [[32mCREATE VIEW (0 processed)[0m in 2.20s]
+[0m14:11:27.695390 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supp_region_details
+[0m14:11:27.695945 [debug] [Thread-1 (]: Began running node model.dbt_bq_sa.sat_inv_supplier_details
+[0m14:11:27.696545 [info ] [Thread-1 (]: 31 of 31 START sql view model dbt_dataset.sat_inv_supplier_details ............. [RUN]
+[0m14:11:27.696930 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_bq_sa.sat_inv_supp_region_details, now model.dbt_bq_sa.sat_inv_supplier_details)
+[0m14:11:27.697180 [debug] [Thread-1 (]: Began compiling node model.dbt_bq_sa.sat_inv_supplier_details
+[0m14:11:27.725560 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_bq_sa.sat_inv_supplier_details"
+[0m14:11:27.733708 [debug] [Thread-1 (]: Began executing node model.dbt_bq_sa.sat_inv_supplier_details
+[0m14:11:27.767132 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_bq_sa.sat_inv_supplier_details"
+[0m14:11:27.771502 [debug] [Thread-1 (]: On model.dbt_bq_sa.sat_inv_supplier_details: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "dbt_bq_sa", "target_name": "dev", "node_id": "model.dbt_bq_sa.sat_inv_supplier_details"} */
+
+
+  create or replace view `trim-field-467501-p5`.`dbt_dataset`.`sat_inv_supplier_details`
+  OPTIONS()
+  as -- Generated by AutomateDV (formerly known as dbtvault)
+
+    
+
+WITH source_data AS (
+    SELECT a.SUPPLIER_PK, a.SUPPLIER_HASHDIFF, a.SUPPLIER_ADDRESS, a.SUPPLIER_PHONE, a.SUPPLIER_ACCTBAL, a.SUPPLIER_NAME, a.SUPPLIER_COMMENT, a.EFFECTIVE_FROM, a.LOAD_DATE, a.RECORD_SOURCE
+    FROM `trim-field-467501-p5`.`dbt_dataset`.`v_stg_inventory` AS a
+    WHERE a.SUPPLIER_PK IS NOT NULL
+),
+
+records_to_insert AS (
+    SELECT DISTINCT stage.SUPPLIER_PK, stage.SUPPLIER_HASHDIFF, stage.SUPPLIER_ADDRESS, stage.SUPPLIER_PHONE, stage.SUPPLIER_ACCTBAL, stage.SUPPLIER_NAME, stage.SUPPLIER_COMMENT, stage.EFFECTIVE_FROM, stage.LOAD_DATE, stage.RECORD_SOURCE
+    FROM source_data AS stage
+)
+
+SELECT * FROM records_to_insert;
+
+
+[0m14:11:27.776775 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:11:28.905007 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=trim-field-467501-p5&j=bq:US:e9d4427d-f2ff-4576-8357-7aca3089a665&page=queryresults
+[0m14:11:29.785661 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d59c97c-e077-4225-a65d-6a8890fe6bae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1561fabf0>]}
+[0m14:11:29.786894 [info ] [Thread-1 (]: 31 of 31 OK created sql view model dbt_dataset.sat_inv_supplier_details ........ [[32mCREATE VIEW (0 processed)[0m in 2.09s]
+[0m14:11:29.787809 [debug] [Thread-1 (]: Finished running node model.dbt_bq_sa.sat_inv_supplier_details
+[0m14:11:29.792454 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:11:29.794232 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:11:29.794544 [debug] [MainThread]: Connection 'model.dbt_bq_sa.sat_inv_supplier_details' was properly closed.
+[0m14:11:29.795296 [info ] [MainThread]: 
+[0m14:11:29.795785 [info ] [MainThread]: Finished running 1 incremental model, 30 view models in 0 hours 1 minutes and 17.74 seconds (77.74s).
+[0m14:11:29.798986 [debug] [MainThread]: Command end result
+[0m14:11:29.835916 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/manifest.json
+[0m14:11:29.844444 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/semantic_manifest.json
+[0m14:11:29.867074 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rishin/PycharmProjects/automate-dv-demo-5.4/target/run_results.json
+[0m14:11:29.867385 [info ] [MainThread]: 
+[0m14:11:29.867816 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:11:29.868166 [info ] [MainThread]: 
+[0m14:11:29.868373 [info ] [MainThread]: Done. PASS=31 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=31
+[0m14:11:29.872933 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 80.27878, "process_in_blocks": "0", "process_kernel_time": 1.956144, "process_mem_max_rss": "343703552", "process_out_blocks": "0", "process_user_time": 6.313053}
+[0m14:11:29.873896 [debug] [MainThread]: Command `dbt run` succeeded at 14:11:29.873831 after 80.28 seconds
+[0m14:11:29.874605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cf7670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x153df01c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x154acbdf0>]}
+[0m14:11:29.874825 [debug] [MainThread]: Flushing usage events
+[0m14:11:30.784207 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:35:27.343597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103a0b6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b301f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b308b0>]}
+
+
+============================== 10:35:27.346676 | 618d1e9f-6969-4c41-b30f-3a3878fd45db ==============================
+[0m10:35:27.346676 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:35:27.346998 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:35:27.428636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '618d1e9f-6969-4c41-b30f-3a3878fd45db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c42560>]}
+[0m10:35:27.474919 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-yyfbi_tx'
+[0m10:35:27.475197 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:35:27.581958 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:35:27.582605 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json
+[0m10:35:28.091597 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json 200
+[0m10:35:28.099646 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:35:28.164310 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:35:28.173500 [info ] [MainThread]: Installing Datavault-UK/automate_dv
+[0m10:35:28.701361 [info ] [MainThread]: Installed from version 0.9.7
+[0m10:35:28.701838 [info ] [MainThread]: Updated version available: 0.11.2
+[0m10:35:28.702201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '618d1e9f-6969-4c41-b30f-3a3878fd45db', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104305690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d03c40>]}
+[0m10:35:28.702613 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:35:29.147458 [info ] [MainThread]: Installed from version 1.3.0
+[0m10:35:29.147774 [info ] [MainThread]: Up to date!
+[0m10:35:29.148021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '618d1e9f-6969-4c41-b30f-3a3878fd45db', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103380a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d03c40>]}
+[0m10:35:29.148290 [info ] [MainThread]: 
+[0m10:35:29.148489 [info ] [MainThread]: Updates available for packages: ['Datavault-UK/automate_dv']                 
+Update your versions in packages.yml, then run dbt deps
+[0m10:35:29.182590 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.8849363, "process_in_blocks": "0", "process_kernel_time": 0.254441, "process_mem_max_rss": "109740032", "process_out_blocks": "0", "process_user_time": 0.873805}
+[0m10:35:29.183068 [debug] [MainThread]: Command `dbt deps` succeeded at 10:35:29.182986 after 1.89 seconds
+[0m10:35:29.183350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103a0b6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c407f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105c405e0>]}
+[0m10:35:29.183612 [debug] [MainThread]: Flushing usage events
+[0m10:35:30.375009 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:36:08.545974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fe76d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105138850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051381c0>]}
+
+
+============================== 10:36:08.549225 | f098c068-05eb-4492-9f36-356736e13a07 ==============================
+[0m10:36:08.549225 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:36:08.549552 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --models path:models/stage', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:36:08.549808 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m10:36:08.549987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f098c068-05eb-4492-9f36-356736e13a07', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104140c10>]}
+[0m10:36:10.741931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f098c068-05eb-4492-9f36-356736e13a07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1028e9d50>]}
+[0m10:36:10.773196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f098c068-05eb-4492-9f36-356736e13a07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13f8f1d50>]}
+[0m10:36:10.773550 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m10:36:10.933234 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m10:36:10.992778 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:36:10.993099 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:36:10.993316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f098c068-05eb-4492-9f36-356736e13a07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a02c80>]}
+[0m10:36:12.013150 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m10:36:12.013770 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:36:12.015327 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.516037, "process_in_blocks": "0", "process_kernel_time": 1.22489, "process_mem_max_rss": "337625088", "process_out_blocks": "0", "process_user_time": 3.769034}
+[0m10:36:12.015702 [debug] [MainThread]: Command `dbt run` failed at 10:36:12.015641 after 3.52 seconds
+[0m10:36:12.015922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fe76d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1412ab3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14140da50>]}
+[0m10:36:12.016126 [debug] [MainThread]: Flushing usage events
+[0m10:36:13.054885 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:39:09.759407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043b36a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10550c3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10550ca90>]}
+
+
+============================== 10:39:09.762404 | d0c03998-6836-4286-a26a-b20112852542 ==============================
+[0m10:39:09.762404 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:39:09.762754 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run -m dbt_stg_trips', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:39:09.763009 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m10:39:09.763206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd0c03998-6836-4286-a26a-b20112852542', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10547a3b0>]}
+[0m10:39:11.522345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0c03998-6836-4286-a26a-b20112852542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x158399030>]}
+[0m10:39:11.553904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0c03998-6836-4286-a26a-b20112852542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x158411630>]}
+[0m10:39:11.554260 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m10:39:11.690002 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m10:39:11.746537 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:39:11.746853 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:39:11.747051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd0c03998-6836-4286-a26a-b20112852542', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dcfb20>]}
+[0m10:39:12.824600 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m10:39:12.825224 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m10:39:12.827083 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.1085887, "process_in_blocks": "0", "process_kernel_time": 1.192384, "process_mem_max_rss": "337772544", "process_out_blocks": "0", "process_user_time": 3.698072}
+[0m10:39:12.827598 [debug] [MainThread]: Command `dbt run` failed at 10:39:12.827532 after 3.11 seconds
+[0m10:39:12.827863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043b36a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1588446d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x158d0d0c0>]}
+[0m10:39:12.830068 [debug] [MainThread]: Flushing usage events
+[0m10:39:13.914870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:41:40.161009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f1b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066343d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106634a90>]}
+
+
+============================== 10:41:40.163917 | 7e5b66ca-86c1-421f-8668-d293d235e227 ==============================
+[0m10:41:40.163917 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:41:40.164236 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select path:models/stage', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:41:42.041621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e5b66ca-86c1-421f-8668-d293d235e227', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102821d50>]}
+[0m10:41:42.072984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e5b66ca-86c1-421f-8668-d293d235e227', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105683100>]}
+[0m10:41:42.073369 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m10:41:42.198972 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m10:41:42.255487 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:41:42.255829 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:41:42.256032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7e5b66ca-86c1-421f-8668-d293d235e227', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055fbb20>]}
+[0m10:41:43.273616 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m10:41:43.275210 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.156394, "process_in_blocks": "0", "process_kernel_time": 1.392145, "process_mem_max_rss": "338034688", "process_out_blocks": "0", "process_user_time": 3.652967}
+[0m10:41:43.275590 [debug] [MainThread]: Command `dbt run` failed at 10:41:43.275526 after 3.16 seconds
+[0m10:41:43.275822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f1b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x168539570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16930d990>]}
+[0m10:41:43.276030 [debug] [MainThread]: Flushing usage events
+[0m10:41:44.214922 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:44:03.831966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084876a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dc580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dfd60>]}
+
+
+============================== 10:44:03.835038 | 7f8c2ee4-4e94-447f-b1e0-9d8bd1de55ca ==============================
+[0m10:44:03.835038 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:44:03.835377 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:44:03.918529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f8c2ee4-4e94-447f-b1e0-9d8bd1de55ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dd9c0>]}
+[0m10:44:03.929694 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-0k3kwp0v'
+[0m10:44:03.929966 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:44:04.037635 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:44:04.038291 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json
+[0m10:44:04.382587 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json 200
+[0m10:44:04.394047 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:44:04.486659 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:44:04.507577 [info ] [MainThread]: Updating lock file in file path: /Users/rishin/PycharmProjects/automate-dv-demo-5.4/package-lock.yml
+[0m10:44:04.550440 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-0drzfb94'
+[0m10:44:04.554522 [info ] [MainThread]: Installing Datavault-UK/automate_dv
+[0m10:44:04.974081 [info ] [MainThread]: Installed from version 0.11.2
+[0m10:44:04.974522 [info ] [MainThread]: Up to date!
+[0m10:44:04.974837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '7f8c2ee4-4e94-447f-b1e0-9d8bd1de55ca', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087d2650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109847190>]}
+[0m10:44:04.975192 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:44:05.449827 [info ] [MainThread]: Installed from version 1.3.0
+[0m10:44:05.450248 [info ] [MainThread]: Up to date!
+[0m10:44:05.450509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '7f8c2ee4-4e94-447f-b1e0-9d8bd1de55ca', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1085e44c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087d16c0>]}
+[0m10:44:05.452308 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.6619674, "process_in_blocks": "0", "process_kernel_time": 0.216322, "process_mem_max_rss": "109920256", "process_out_blocks": "0", "process_user_time": 0.852134}
+[0m10:44:05.452674 [debug] [MainThread]: Command `dbt deps` succeeded at 10:44:05.452600 after 1.66 seconds
+[0m10:44:05.452921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084876a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095dd9c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097a7880>]}
+[0m10:44:05.453157 [debug] [MainThread]: Flushing usage events
+[0m10:44:06.579821 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:44:32.063502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cc76a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079307c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079301f0>]}
+
+
+============================== 10:44:32.066401 | f4af6494-1c90-4e69-bb87-5c49752c8151 ==============================
+[0m10:44:32.066401 [info ] [MainThread]: Running with dbt=1.10.7
+[0m10:44:32.066729 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select path:models/stage', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:44:33.954420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f4af6494-1c90-4e69-bb87-5c49752c8151', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106129a20>]}
+[0m10:44:33.986111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f4af6494-1c90-4e69-bb87-5c49752c8151', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078a4a90>]}
+[0m10:44:33.986487 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m10:44:34.121515 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m10:44:34.176808 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m10:44:34.177153 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:44:34.177315 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m10:44:34.177488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f4af6494-1c90-4e69-bb87-5c49752c8151', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070fbb20>]}
+[0m10:44:35.193988 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m10:44:35.195418 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.1719587, "process_in_blocks": "0", "process_kernel_time": 1.13718, "process_mem_max_rss": "337608704", "process_out_blocks": "0", "process_user_time": 3.825295}
+[0m10:44:35.195793 [debug] [MainThread]: Command `dbt run` failed at 10:44:35.195733 after 3.17 seconds
+[0m10:44:35.196008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cc76a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1629a5b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x162d23340>]}
+[0m10:44:35.196206 [debug] [MainThread]: Flushing usage events
+[0m10:44:36.273800 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -23,28 +23,12 @@ vars:
   tpch_size: 10 #1, 10, 100, 1000, 10000
 
 models:
-    raw_stage:
-      +materialized: view
-      +tags:
-        - 'raw'
-    stage:
-      +materialized: view
-      +tags:
-        - 'stage'
-      +enabled: true
-    raw_vault:
-      +materialized: incremental
-      +tags:
-        - 'raw_vault'
-      hubs:
-        +tags:
-          - 'hub'
-      links:
-        +tags:
-          - 'link'
-      sats:
-        +tags:
-          - 'satellite'
-      t_links:
-        +tags:
-          - 't_link'
+  stage:
+    schema: citibike_stage_sql
+    materialized: view
+  raw_vault:
+    schema: citibike_sql_dvm
+    materialized: incremental
+  business_vault:
+    schema: citibike_sql_bdvm
+    materialized: view

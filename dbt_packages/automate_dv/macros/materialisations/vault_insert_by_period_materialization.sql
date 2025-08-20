@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Business Thinking Ltd. 2019-2023
+ * Copyright (c) Business Thinking Ltd. 2019-2025
  * This software includes code developed by the AutomateDV (f.k.a dbtvault) Team at Business Thinking Ltd. Trading as Datavault
  */
 
@@ -7,11 +7,18 @@
 
     {%- set full_refresh_mode = (should_full_refresh()) -%}
 
-    {% if target.type == "sqlserver" %}
-        {%- set target_relation = this.incorporate(type='table') -%}
-    {%  else %}
-        {%- set target_relation = this -%}
-    {% endif %}
+    {%- set period = config.get('period', default='day') -%}
+
+    {#- Raise the errors/warnings in this order so that we do not get both -#}
+    {%- if period == 'microsecond' -%}
+        {{ automate_dv.datepart_too_small_error(period=period) }}
+    {%- elif period is in ['millisecond', 'second', 'minute', 'hour'] -%}
+        {{ automate_dv.datepart_not_recommended_warning(period=period) }}
+    {%- endif -%}
+
+    {{ automate_dv.materialisation_deprecation_warning() }}
+
+    {%- set target_relation = this.incorporate(type='table') -%}
     {%- set existing_relation = load_relation(this) -%}
     {%- set tmp_relation = make_temp_relation(target_relation) -%}
 
@@ -19,25 +26,6 @@
     {%- set date_source_models = config.get('date_source_models', default=none) -%}
 
     {%- set start_stop_dates = automate_dv.get_start_stop_dates(timestamp_field, date_source_models) | as_native -%}
-
-    {%- set period = config.get('period', default='day') -%}
-    {%- if period == 'microsecond' -%}
-        {%- set error_message -%}
-        'This datepart ({{ period }}) is too small and cannot be used for this purpose, consider using a different datepart value (e.g. day).
-         Vault_insert_by materialisations are not intended for this purpose,
-        please see https://automate-dv.readthedocs.io/en/latest/materialisations/'
-        {%- endset -%}
-
-        {{- exceptions.raise_compiler_error(error_message) -}}
-    {%- elif period is in ['millisecond', 'second', 'minute', 'hour'] -%}
-        {%- set warn_message -%}
-        'WARNING: The use of this datepart ({{ period }}) is not recommended, consider using a different datepart value (e.g. day).
-        Vault_insert_by materialisations are not intended for this purpose,
-        please see https://automate-dv.readthedocs.io/en/latest/materialisations/'
-        {%- endset -%}
-
-        {{- exceptions.warn(warn_message) -}}
-    {%- endif -%}
 
     {%- set to_drop = [] -%}
 
@@ -51,7 +39,6 @@
     {{ run_hooks(pre_hooks, inside_transaction=True) }}
 
     {% if existing_relation is none %}
-
         {% set filtered_sql = automate_dv.replace_placeholder_with_period_filter(core_sql=sql, timestamp_field=timestamp_field,
                                                                        start_timestamp=start_stop_dates.start_date,
                                                                        stop_timestamp=start_stop_dates.stop_date,
@@ -60,7 +47,6 @@
         {% do to_drop.append(tmp_relation) %}
 
     {% elif existing_relation.is_view %}
-
         {{ log("Dropping relation " ~ target_relation ~ " because it is a view and this model is a table (vault_insert_by_period).") }}
         {% do adapter.drop_relation(existing_relation) %}
         {% set build_sql = create_table_as(False, target_relation, filtered_sql) %}
@@ -73,20 +59,19 @@
 
     {% elif full_refresh_mode %}
         {% set filtered_sql = automate_dv.replace_placeholder_with_period_filter(core_sql=sql, timestamp_field=timestamp_field,
-                                                                       start_timestamp=start_stop_dates.start_date,
-                                                                       stop_timestamp=start_stop_dates.stop_date,
-                                                                       offset=0, period=period) %}
-        {% if target.type == "postgres" %}
+                                                                                 start_timestamp=start_stop_dates.start_date,
+                                                                                 stop_timestamp=start_stop_dates.stop_date,
+                                                                                 offset=0, period=period) %}
+        {% if target.type in ['postgres', 'sqlserver'] %}
             {{ automate_dv.drop_temporary_special(target_relation) }}
         {% endif %}
+
         {% set build_sql = create_table_as(False, target_relation, filtered_sql) %}
     {% else %}
-        {% set period_boundaries = automate_dv.get_period_boundaries(target_relation,
-                                                                  timestamp_field,
-                                                                  start_stop_dates.start_date,
-                                                                  start_stop_dates.stop_date,
-                                                                  period) %}
-
+        {% set period_boundaries = automate_dv.get_period_boundaries(target_relation, timestamp_field,
+                                                                     start_stop_dates.start_date,
+                                                                     start_stop_dates.stop_date,
+                                                                     period) %}
         {% set target_columns = adapter.get_columns_in_relation(target_relation) %}
         {%- set target_cols_csv = target_columns | map(attribute='quoted') | join(', ') -%}
         {%- set loop_vars = {'sum_rows_inserted': 0} -%}
@@ -102,10 +87,8 @@
             {% set tmp_relation = make_temp_relation(target_relation) %}
 
             {% set tmp_table_sql = automate_dv.get_period_filter_sql(target_cols_csv, sql, timestamp_field, period,
-                                                                  period_boundaries.start_timestamp,
-                                                                  period_boundaries.stop_timestamp, i) %}
-
-
+                                                                     period_boundaries.start_timestamp,
+                                                                     period_boundaries.stop_timestamp, i) %}
 
             {# This call statement drops and then creates a temporary table #}
             {# but MSSQL will fail to drop any temporary table created by a previous loop iteration #}
@@ -218,3 +201,9 @@
     {{ return({'relations': [target_relation]}) }}
 
 {%- endmaterialization %}
+
+{% materialization vault_insert_by_period, adapter='sqlserver' %}
+
+{{ automate_dv.currently_disabled_error(func_name='vault_insert_by_period') }}
+
+{% endmaterialization %}

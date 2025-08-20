@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Business Thinking Ltd. 2019-2023
+ * Copyright (c) Business Thinking Ltd. 2019-2025
  * This software includes code developed by the AutomateDV (f.k.a dbtvault) Team at Business Thinking Ltd. Trading as Datavault
  */
 
@@ -84,7 +84,7 @@
 
 {% macro sqlserver__get_period_boundaries(target_relation, timestamp_field, start_date, stop_date, period) -%}
     {%- if period is in ['microsecond', 'millisecond', 'second'] -%}
-        {{ automate_dv.sqlserver_datepart_too_small_error(period=period) }}
+        {{ automate_dv.datepart_too_small_error(period=period) }}
     {%- endif -%}
 
     {#  MSSQL cannot CAST datetime2 strings with more than 7 decimal places #}
@@ -100,7 +100,7 @@
                 CAST(COALESCE({{ automate_dv.timestamp_add(datepart, interval, from_date_or_timestamp) }},
                          {{ current_timestamp() }} ) AS DATETIME2) AS stop_timestamp
             FROM {{ target_relation }}
-      )
+        )
         SELECT
             start_timestamp,
             stop_timestamp,

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Business Thinking Ltd. 2019-2023
+ * Copyright (c) Business Thinking Ltd. 2019-2025
  * This software includes code developed by the AutomateDV (f.k.a dbtvault) Team at Business Thinking Ltd. Trading as Datavault
  */
 
@@ -11,7 +11,7 @@
                                                          period=period) %}
 
     {%- if num_periods > 100000 -%}
-        {{ automate_dv.sqlserver_max_iterations_error() }}
+        {{ automate_dv.max_iterations_error() }}
     {%- endif -%}
 
     {% do return(num_periods) %}

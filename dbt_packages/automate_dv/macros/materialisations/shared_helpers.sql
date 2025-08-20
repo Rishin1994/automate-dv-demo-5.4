@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Business Thinking Ltd. 2019-2023
+ * Copyright (c) Business Thinking Ltd. 2019-2025
  * This software includes code developed by the AutomateDV (f.k.a dbtvault) Team at Business Thinking Ltd. Trading as Datavault
  */
 
@@ -8,8 +8,9 @@
     {%- if model_sql.find(placeholder) == -1 -%}
     {%- set error_message -%}
     Model '{{ model.unique_id }}' does not include the required string '{{ placeholder }}' in its sql
-        {%- endset -%}
-        {{- exceptions.raise_compiler_error(error_message) -}}
+    {%- endset -%}
+
+    {{- exceptions.raise_compiler_error(error_message) -}}
     {%- endif -%}
 
 {%- endmacro -%}
