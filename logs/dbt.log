@@ -12678,3 +12678,353 @@ Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
 [0m10:44:35.196008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cc76a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1629a5b40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x162d23340>]}
 [0m10:44:35.196206 [debug] [MainThread]: Flushing usage events
 [0m10:44:36.273800 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:08:39.666959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11119b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114f343a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114f34a60>]}
+
+
+============================== 17:08:39.670041 | 467ee1f4-179d-47a9-bf38-036b2eff4728 ==============================
+[0m17:08:39.670041 [info ] [MainThread]: Running with dbt=1.10.7
+[0m17:08:39.670372 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m17:08:41.755129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '467ee1f4-179d-47a9-bf38-036b2eff4728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f71d50>]}
+[0m17:08:41.798788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '467ee1f4-179d-47a9-bf38-036b2eff4728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113e83100>]}
+[0m17:08:41.799363 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m17:08:41.984846 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m17:08:42.043155 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:08:42.043498 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:08:42.043671 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:08:42.043862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '467ee1f4-179d-47a9-bf38-036b2eff4728', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113dfbb20>]}
+[0m17:08:43.121760 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:08:43.152686 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.5376863, "process_in_blocks": "0", "process_kernel_time": 1.546918, "process_mem_max_rss": "328908800", "process_out_blocks": "0", "process_user_time": 3.664986}
+[0m17:08:43.153210 [debug] [MainThread]: Command `dbt run` failed at 17:08:43.153134 after 3.54 seconds
+[0m17:08:43.153509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11119b6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15ce7c700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15d8231f0>]}
+[0m17:08:43.153844 [debug] [MainThread]: Flushing usage events
+[0m17:08:44.160061 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:17.249882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10450f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10565c760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10565d8a0>]}
+
+
+============================== 17:10:17.253383 | ffeb3e18-51ca-4b86-b400-ecbac17f2b0d ==============================
+[0m17:10:17.253383 [info ] [MainThread]: Running with dbt=1.10.7
+[0m17:10:17.253733 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'debug': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:10:17.338451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ffeb3e18-51ca-4b86-b400-ecbac17f2b0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10565e590>]}
+[0m17:10:17.374884 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-378p44l8'
+[0m17:10:17.375172 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:10:17.444213 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:10:17.444769 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json
+[0m17:10:17.742043 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json 200
+[0m17:10:17.743933 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:10:17.772070 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:10:17.776377 [info ] [MainThread]: Installing Datavault-UK/automate_dv
+[0m17:10:18.196243 [info ] [MainThread]: Installed from version 0.11.2
+[0m17:10:18.196700 [info ] [MainThread]: Up to date!
+[0m17:10:18.197050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ffeb3e18-51ca-4b86-b400-ecbac17f2b0d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104837fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105833fa0>]}
+[0m17:10:18.197427 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:10:18.646645 [info ] [MainThread]: Installed from version 1.3.0
+[0m17:10:18.647025 [info ] [MainThread]: Up to date!
+[0m17:10:18.647323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ffeb3e18-51ca-4b86-b400-ecbac17f2b0d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104837fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105833850>]}
+[0m17:10:18.649314 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.4462969, "process_in_blocks": "0", "process_kernel_time": 0.187258, "process_mem_max_rss": "107200512", "process_out_blocks": "0", "process_user_time": 0.805007}
+[0m17:10:18.649721 [debug] [MainThread]: Command `dbt deps` succeeded at 17:10:18.649636 after 1.45 seconds
+[0m17:10:18.650007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10450f700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10565fc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10466ebf0>]}
+[0m17:10:18.650271 [debug] [MainThread]: Flushing usage events
+[0m17:10:19.566863 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:10:36.117531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103dcb700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f24730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f27d30>]}
+
+
+============================== 17:10:36.120424 | 7275e8ab-c088-4018-894e-be6fd594a35e ==============================
+[0m17:10:36.120424 [info ] [MainThread]: Running with dbt=1.10.7
+[0m17:10:36.120774 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run -m dbt_stg_users', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:10:36.121029 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m17:10:36.121211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7275e8ab-c088-4018-894e-be6fd594a35e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e5fd00>]}
+[0m17:10:37.914339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7275e8ab-c088-4018-894e-be6fd594a35e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10268dd50>]}
+[0m17:10:37.945399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7275e8ab-c088-4018-894e-be6fd594a35e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f2de10>]}
+[0m17:10:37.945788 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m17:10:38.068405 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m17:10:38.128971 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:10:38.129275 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:10:38.129434 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:10:38.129607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7275e8ab-c088-4018-894e-be6fd594a35e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103f2c640>]}
+[0m17:10:39.170330 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:10:39.170803 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:10:39.172277 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.0957656, "process_in_blocks": "0", "process_kernel_time": 1.096579, "process_mem_max_rss": "339460096", "process_out_blocks": "0", "process_user_time": 3.798784}
+[0m17:10:39.172638 [debug] [MainThread]: Command `dbt run` failed at 17:10:39.172579 after 3.10 seconds
+[0m17:10:39.172852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103dcb700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10333e7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x146c23040>]}
+[0m17:10:39.173050 [debug] [MainThread]: Flushing usage events
+[0m17:10:40.105535 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:11:41.829021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062bf700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107410730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107410070>]}
+
+
+============================== 17:11:41.832246 | baa51747-c57d-46e1-99e9-51e176912598 ==============================
+[0m17:11:41.832246 [info ] [MainThread]: Running with dbt=1.10.7
+[0m17:11:41.832641 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt compile', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:11:44.205484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'baa51747-c57d-46e1-99e9-51e176912598', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc1d50>]}
+[0m17:11:44.240731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'baa51747-c57d-46e1-99e9-51e176912598', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d61330>]}
+[0m17:11:44.241230 [info ] [MainThread]: Registered adapter: bigquery=1.10.1
+[0m17:11:44.398228 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m17:11:44.460561 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:11:44.460945 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:11:44.461122 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:11:44.461322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'baa51747-c57d-46e1-99e9-51e176912598', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10641c640>]}
+[0m17:11:45.521594 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:11:45.525780 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 3.7389297, "process_in_blocks": "0", "process_kernel_time": 1.211007, "process_mem_max_rss": "317145088", "process_out_blocks": "0", "process_user_time": 3.958983}
+[0m17:11:45.526654 [debug] [MainThread]: Command `dbt compile` failed at 17:11:45.526337 after 3.74 seconds
+[0m17:11:45.527095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062bf700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16a83aec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16b823160>]}
+[0m17:11:45.527494 [debug] [MainThread]: Flushing usage events
+[0m17:11:46.457316 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:15:07.820667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e7f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122e3370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122e2f80>]}
+
+
+============================== 17:15:07.823747 | a24dc40c-ad93-4f31-8cb0-83874ffedf27 ==============================
+[0m17:15:07.823747 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:15:07.824069 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt compile', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:15:08.624510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a24dc40c-ad93-4f31-8cb0-83874ffedf27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122e2e90>]}
+[0m17:15:08.654471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a24dc40c-ad93-4f31-8cb0-83874ffedf27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122e1330>]}
+[0m17:15:08.655002 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:15:08.672040 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:15:08.683650 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:15:08.683976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a24dc40c-ad93-4f31-8cb0-83874ffedf27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16081f730>]}
+[0m17:15:09.950945 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:15:09.952897 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.1676438, "process_user_time": 3.424189, "process_kernel_time": 1.312254, "process_mem_max_rss": "196444160", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:15:09.953437 [debug] [MainThread]: Command `dbt compile` failed at 17:15:09.953304 after 2.17 seconds
+[0m17:15:09.953711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e7f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1609a5120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1609a5210>]}
+[0m17:15:09.953946 [debug] [MainThread]: Flushing usage events
+[0m17:17:24.951202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10589fee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d1f340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d1ef50>]}
+
+
+============================== 17:17:24.954384 | aec6dc96-b905-45a3-9a3c-95c28c2639d2 ==============================
+[0m17:17:24.954384 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:17:24.954725 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt compile', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:17:25.971969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aec6dc96-b905-45a3-9a3c-95c28c2639d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d1ee60>]}
+[0m17:17:26.002483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aec6dc96-b905-45a3-9a3c-95c28c2639d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c7b940>]}
+[0m17:17:26.003106 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:17:26.027832 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:17:26.040935 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:17:26.041297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'aec6dc96-b905-45a3-9a3c-95c28c2639d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14d93da20>]}
+[0m17:17:27.286027 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:17:27.287610 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.3780866, "process_user_time": 3.525806, "process_kernel_time": 1.07648, "process_mem_max_rss": "193118208", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:17:27.288070 [debug] [MainThread]: Command `dbt compile` failed at 17:17:27.287990 after 2.38 seconds
+[0m17:17:27.288324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10589fee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14db990c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14db991b0>]}
+[0m17:17:27.288563 [debug] [MainThread]: Flushing usage events
+[0m17:18:02.040363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10379f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075dffa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075def80>]}
+
+
+============================== 17:18:02.043431 | 4b4e7aa8-b755-4c92-9dfd-85b254f7828a ==============================
+[0m17:18:02.043431 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:18:02.043751 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'version_check': 'True', 'profiles_dir': '/Users/rishin/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:02.094222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b4e7aa8-b755-4c92-9dfd-85b254f7828a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107681480>]}
+[0m17:18:02.095382 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-0kamqyau'
+[0m17:18:02.095662 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:18:02.195595 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:18:02.196298 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json
+[0m17:18:02.502692 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/Datavault-UK/automate_dv.json 200
+[0m17:18:02.509158 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:18:02.586028 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:18:02.602308 [info ] [MainThread]: Updating lock file in file path: /Users/rishin/PycharmProjects/automate-dv-demo-5.4/package-lock.yml
+[0m17:18:02.638978 [debug] [MainThread]: Set downloads directory='/var/folders/8l/ntf_rgvx30x04x54cqz4z2x80000gn/T/dbt-downloads-m65_wpvo'
+[0m17:18:02.643908 [info ] [MainThread]: Installing Datavault-UK/automate_dv
+[0m17:18:03.052884 [info ] [MainThread]: Installed from version 0.11.0
+[0m17:18:03.053442 [info ] [MainThread]: Updated version available: 0.11.2
+[0m17:18:03.053889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '4b4e7aa8-b755-4c92-9dfd-85b254f7828a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076b5f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076b6aa0>]}
+[0m17:18:03.054269 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:18:03.511181 [info ] [MainThread]: Installed from version 1.3.0
+[0m17:18:03.511661 [info ] [MainThread]: Up to date!
+[0m17:18:03.512006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '4b4e7aa8-b755-4c92-9dfd-85b254f7828a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076b57e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076b76a0>]}
+[0m17:18:03.512363 [info ] [MainThread]: 
+[0m17:18:03.512729 [info ] [MainThread]: Updates available for packages: ['Datavault-UK/automate_dv']                 
+Update your versions in packages.yml, then run dbt deps
+[0m17:18:03.515003 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.5085565, "process_user_time": 1.144451, "process_kernel_time": 0.201264, "process_mem_max_rss": "109248512", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:18:03.515459 [debug] [MainThread]: Command `dbt deps` succeeded at 17:18:03.515351 after 1.51 seconds
+[0m17:18:03.515781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10379f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075dce20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076815d0>]}
+[0m17:18:03.516100 [debug] [MainThread]: Flushing usage events
+[0m17:18:10.610400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10399f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077e3370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077e2f80>]}
+
+
+============================== 17:18:10.613276 | d39fef04-ff24-4b52-86a7-14fe826f76b9 ==============================
+[0m17:18:10.613276 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:18:10.613591 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:11.409053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd39fef04-ff24-4b52-86a7-14fe826f76b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077e2e90>]}
+[0m17:18:11.438786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd39fef04-ff24-4b52-86a7-14fe826f76b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077e1330>]}
+[0m17:18:11.439308 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:18:11.462198 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:18:11.474192 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:18:11.474534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd39fef04-ff24-4b52-86a7-14fe826f76b9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14691c310>]}
+[0m17:18:12.640598 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:18:12.642031 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.0643606, "process_user_time": 3.418263, "process_kernel_time": 1.199255, "process_mem_max_rss": "201310208", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:18:12.642420 [debug] [MainThread]: Command `dbt compile` failed at 17:18:12.642340 after 2.06 seconds
+[0m17:18:12.642657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10399f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x146b95150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x146b95240>]}
+[0m17:18:12.642871 [debug] [MainThread]: Flushing usage events
+[0m17:19:25.490853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10559f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881f370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881ef80>]}
+
+
+============================== 17:19:25.495440 | aa4f0016-a716-464a-a70c-e826bb693951 ==============================
+[0m17:19:25.495440 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:19:25.495799 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'version_check': 'True', 'profiles_dir': '/Users/rishin/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:19:26.500744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aa4f0016-a716-464a-a70c-e826bb693951', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10881ee90>]}
+[0m17:19:26.531972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aa4f0016-a716-464a-a70c-e826bb693951', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10877b880>]}
+[0m17:19:26.532557 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:19:26.557122 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:19:26.571880 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:19:26.572239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'aa4f0016-a716-464a-a70c-e826bb693951', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fa40370>]}
+[0m17:19:27.829438 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:19:27.831137 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.3769257, "process_user_time": 3.331464, "process_kernel_time": 1.417639, "process_mem_max_rss": "189628416", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:19:27.831501 [debug] [MainThread]: Command `dbt compile` failed at 17:19:27.831427 after 2.38 seconds
+[0m17:19:27.831720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10559f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fc850f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12fc851e0>]}
+[0m17:19:27.831925 [debug] [MainThread]: Flushing usage events
+[0m17:22:25.292182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a632e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ae3370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ae2f80>]}
+
+
+============================== 17:22:25.296033 | 8ac0f153-0875-4092-a786-cbe263de4b20 ==============================
+[0m17:22:25.296033 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:22:25.296356 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m17:22:26.147221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8ac0f153-0875-4092-a786-cbe263de4b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ae2e90>]}
+[0m17:22:26.177091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8ac0f153-0875-4092-a786-cbe263de4b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a438b0>]}
+[0m17:22:26.177638 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:22:26.196920 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:22:26.210364 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:22:26.210772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8ac0f153-0875-4092-a786-cbe263de4b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x134f41a20>]}
+[0m17:22:27.523657 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_trips`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_trips (models/stage/dbt_stg_trips.sql)
+[0m17:22:27.525088 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.272935, "process_user_time": 3.606979, "process_kernel_time": 1.12726, "process_mem_max_rss": "196919296", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:22:27.525500 [debug] [MainThread]: Command `dbt compile` failed at 17:22:27.525418 after 2.27 seconds
+[0m17:22:27.525750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a632e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1379990c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1379991b0>]}
+[0m17:22:27.525989 [debug] [MainThread]: Flushing usage events
+[0m17:22:57.906075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10719f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b81f370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b81ef80>]}
+
+
+============================== 17:22:57.923071 | 40cfabec-cfb1-4438-aca2-3813b3377cf6 ==============================
+[0m17:22:57.923071 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:22:57.923614 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:22:58.843157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '40cfabec-cfb1-4438-aca2-3813b3377cf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b81ee90>]}
+[0m17:22:58.872726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '40cfabec-cfb1-4438-aca2-3813b3377cf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7c9930>]}
+[0m17:22:58.873222 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:22:58.895509 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:22:58.909120 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:22:58.909571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '40cfabec-cfb1-4438-aca2-3813b3377cf6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x158e8b9d0>]}
+[0m17:23:00.155180 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_stations (models/stage/dbt_stg_stations.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_stations`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_stations (models/stage/dbt_stg_stations.sql)
+[0m17:23:00.156749 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.284598, "process_user_time": 3.334597, "process_kernel_time": 1.349241, "process_mem_max_rss": "194150400", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:23:00.157068 [debug] [MainThread]: Command `dbt compile` failed at 17:23:00.156981 after 2.28 seconds
+[0m17:23:00.157314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10719f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a000cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a003430>]}
+[0m17:23:00.157536 [debug] [MainThread]: Flushing usage events
+[0m17:24:00.476678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104debe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e97fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e96f80>]}
+
+
+============================== 17:24:00.479939 | b2bbe2f1-bad7-4897-b982-a8a50bb8e73a ==============================
+[0m17:24:00.479939 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:24:00.480277 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:24:01.349725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b2bbe2f1-bad7-4897-b982-a8a50bb8e73a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e96e90>]}
+[0m17:24:01.379296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b2bbe2f1-bad7-4897-b982-a8a50bb8e73a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e40a00>]}
+[0m17:24:01.379800 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:24:01.407744 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:24:01.421039 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:24:01.421412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b2bbe2f1-bad7-4897-b982-a8a50bb8e73a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e21e830>]}
+[0m17:24:02.688412 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_users (models/stage/dbt_stg_users.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_users`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_users (models/stage/dbt_stg_users.sql)
+[0m17:24:02.689904 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.2532697, "process_user_time": 3.414033, "process_kernel_time": 1.296298, "process_mem_max_rss": "199819264", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:24:02.690208 [debug] [MainThread]: Command `dbt compile` failed at 17:24:02.690133 after 2.25 seconds
+[0m17:24:02.690442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104debe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e81c040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e81ee60>]}
+[0m17:24:02.690660 [debug] [MainThread]: Flushing usage events
+[0m17:24:52.342742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bf32e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11381f370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11381ef80>]}
+
+
+============================== 17:24:52.345819 | 41d510e7-c0d3-4b5b-8f25-f63c2e7db9c5 ==============================
+[0m17:24:52.345819 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:24:52.346151 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:24:53.235767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '41d510e7-c0d3-4b5b-8f25-f63c2e7db9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11381ee90>]}
+[0m17:24:53.285230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '41d510e7-c0d3-4b5b-8f25-f63c2e7db9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1137c58d0>]}
+[0m17:24:53.285944 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:24:53.305004 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:24:53.316561 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:24:53.316895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '41d510e7-c0d3-4b5b-8f25-f63c2e7db9c5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137745de0>]}
+[0m17:24:54.617766 [error] [MainThread]: Encountered an error:
+Compilation Error in model dbt_stg_bikes (models/stage/dbt_stg_bikes.sql)
+  The object ("`leafy-mountain-469410-k3`.`citibike_source_sql`.`dbt_stg_bikes`") was used as a dictionary. This capability has been removed from objects of this type.
+  
+  > in macro default__stage (macros/staging/stage.sql)
+  > called by macro stage (macros/staging/stage.sql)
+  > called by model dbt_stg_bikes (models/stage/dbt_stg_bikes.sql)
+[0m17:24:54.619210 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.3114667, "process_user_time": 3.439025, "process_kernel_time": 1.139735, "process_mem_max_rss": "199278592", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:24:54.619499 [debug] [MainThread]: Command `dbt compile` failed at 17:24:54.619423 after 2.31 seconds
+[0m17:24:54.619718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bf32e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a62aa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15a62a950>]}
+[0m17:24:54.619923 [debug] [MainThread]: Flushing usage events
+[0m17:25:33.783873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f6e9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1149e3370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1149e2f80>]}
+
+
+============================== 17:25:33.786937 | f5e4fccc-5453-4ca4-933f-0fe46ecdeedb ==============================
+[0m17:25:33.786937 [info ] [MainThread]: Running with dbt=1.7.19
+[0m17:25:33.787305 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rishin/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/rishin/PycharmProjects/automate-dv-demo-5.4/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m17:25:34.642013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f5e4fccc-5453-4ca4-933f-0fe46ecdeedb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1149e2e90>]}
+[0m17:25:34.671949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f5e4fccc-5453-4ca4-933f-0fe46ecdeedb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11498cfa0>]}
+[0m17:25:34.672443 [info ] [MainThread]: Registered adapter: bigquery=1.7.9
+[0m17:25:34.692586 [debug] [MainThread]: checksum: a8d43cdff37d0f32d7fbe4c5c25bea4bb6c86e162f8ce8fdb1a38cdcf7495431, vars: {}, profile: , target: , version: 1.7.19
+[0m17:25:34.706869 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m17:25:34.707219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f5e4fccc-5453-4ca4-933f-0fe46ecdeedb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x14871fac0>]}
+[0m17:25:36.051078 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_bq_sa.dbt_stg_trips' (models/stage/dbt_stg_trips.sql) depends on a node named 'src_sql_trips' which was not found
+[0m17:25:36.053613 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.3041694, "process_user_time": 3.455143, "process_kernel_time": 1.2558, "process_mem_max_rss": "205832192", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:25:36.053909 [debug] [MainThread]: Command `dbt compile` failed at 17:25:36.053827 after 2.30 seconds
+[0m17:25:36.054135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f6e9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x148df4310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x148c4a620>]}
+[0m17:25:36.054332 [debug] [MainThread]: Flushing usage events
